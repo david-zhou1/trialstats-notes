@@ -1,0 +1,10 @@
+---
+title: "自适应设计"
+---
+
+## 计划内容
+
+- Group Sequential Design 与 Alpha Spending
+- Conditional Power 与 Conditional Error
+- [Promising Zone 样本量再估计](pz.qmd)
+- Combination Test、阶段性独立性与模拟验证

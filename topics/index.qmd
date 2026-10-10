@@ -1,0 +1,7 @@
+---
+title: "Deep Dives / 方法专题"
+---
+
+这里放**完整的统计论证或深入技术文章**，包括数学推导、设计权衡、可复现仿真与限制条件。
+
+- [Promising Zone 与 inverse-normal combination：专题文章结构](pz-inverse-normal.qmd)

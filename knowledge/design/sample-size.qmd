@@ -1,0 +1,40 @@
+---
+title: "生存终点的事件数与总样本量"
+description: "Schoenfeld近似、事件驱动设计及入组/随访参数"
+categories: [Survival Analysis, Sample Size, Design]
+---
+
+## 核心区别
+
+**事件数**主要由显著性水平、把握度、分配比例和假设 HR 决定；**总样本量**还取决于事件成熟概率、入组历程、随访时间和脱落等因素。两者不能直接等同。
+
+## 常用近似公式
+
+当采用 Log-rank 检验、比例风险假设、**1:1 随机分组**时，可以使用以下近似的总事件数公式：
+
+$$
+D \approx \frac{4\left(z_{1-\alpha}+z_{1-\beta}\right)^2}{\left(\log HR\right)^2}.
+$$
+
+其中 $D$ 为总事件数，$\alpha$ 是单侧显著性水平，$1-\beta$ 为把握度。这是规划阶段的近似，不等同于完整时间到事件设计模型。
+
+## 可复现 R 代码
+
+```r
+required_events <- function(hr = 0.70, power = 0.80, alpha = 0.025) {
+  stopifnot(hr > 0, hr < 1, power > 0, power < 1,
+            alpha > 0, alpha < 1)
+  ceiling(4 * (qnorm(1-alpha) + qnorm(power))^2 / log(hr)^2)
+}
+required_events()
+```
+
+## 事件数如何换算样本量？
+
+实际设计还需要对入组速度、随访截点、对照组风险分布、竞争事件（如适用）和脱落机制建模。不同软件所计算出的样本量不一致时，应先检查这些输入参数及软件的模型设定。
+
+尝试 [浏览器端事件数计算器](../../tools/event-calculator.html)，了解 HR、Power 和 Alpha 的敏感性。
+
+::: {.callout-warning}
+该页面仅给出近似公式，不含事件驱动试验精确日历模型、组序贯边界或自适应修正；不应直接用作正式方案的样本量依据。
+:::

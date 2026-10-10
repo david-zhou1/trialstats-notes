@@ -1,0 +1,18 @@
+/.quarto/
+/_site/
+.Rproj.user/
+.DS_Store
+
+# Exported local study state / do not commit
+*personal-notes*.json
+*private-backup*.json
+private/
+
+# Private files must never enter the public Git repository
+private-vault/
+private/
+**/*personal*backup*.json
+**/*vault*backup*.json
+**/*.enc.json
+
+**/*.quarto_ipynb

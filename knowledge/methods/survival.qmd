@@ -1,0 +1,26 @@
+---
+title: "生存分析：Log-rank、Hazard Ratio 与 Cox"
+categories: [Survival Analysis, Cox Model]
+---
+
+## 方法要回答的问题
+
+- Kaplan–Meier 曲线估计的是各时间点的生存函数 $S(t)$。
+- Log-rank 检验用于比较组间生存经验；其检验结果不是效应量。
+- Cox 模型通常报告 HR 及其置信区间；比例风险假设的合理性应被评估。
+
+$$S(t) = P(T>t).$$
+
+## R 代码示意（请使用模拟或可公开数据）
+
+```r
+library(survival)
+# df 包含 time、event（1=事件，0=删失）、arm
+km <- survfit(Surv(time, event) ~ arm, data = df)
+lr <- survdiff(Surv(time, event) ~ arm, data = df)
+cox <- coxph(Surv(time, event) ~ arm, data = df)
+```
+
+## 常见陷阱
+
+HR 是相对瞬时风险，不等于风险比或中位生存时间比。违反比例风险假设时，应谨慎解释单一 HR 摘要。

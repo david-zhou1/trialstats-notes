@@ -1,0 +1,12 @@
+---
+title: "法规与指导原则"
+---
+
+以官方来源为准的索引页（计划持续更新）：
+
+- ICH E9：Clinical Trials 的统计原则
+- ICH E9(R1)：Estimands and Sensitivity Analysis
+- ICH E20：Adaptive Designs for Clinical Trials（核实地区实施状态和适用版本）
+- FDA / EMA / NMPA 等机构发布的适用指导文件
+
+写文章时记录**发布日期、版本、适用地区、更新日期**，不要将草案当作最终生效文件。

@@ -1,0 +1,47 @@
+---
+title: "TrialStats Notes"
+subtitle: "Clinical Trial Design · Biostatistics · Statistical Computing"
+sidebar: false
+page-layout: full
+---
+
+::: {.hero}
+# From Questions to Knowledge
+
+把临床试验工作中的**每一次提问**，整理成长期可搜索、可复习的统计知识。
+
+面向生物统计同行的个人知识库、方法学文章、编程项目与交互式工具。
+
+[**进入问答复习中心 →**](questions/review.html){.btn .btn-primary}　[浏览全部问答](questions/catalog.qmd){.btn .btn-outline-primary}
+:::
+
+::: {.link-grid}
+<a href="questions/review.html"><strong>Q&A · 问答复习</strong><span>33条公开专业问答，支持关键词搜索、分类、隐藏答案与解析。</span></a>
+<a href="knowledge/index.html"><strong>Knowledge Base</strong><span>系统化整理临床试验设计、Estimand、统计分析与指导原则。</span></a>
+<a href="topics/index.html"><strong>Deep Dives</strong><span>深入讨论方法假设、推导、统计模拟与验证。</span></a>
+<a href="projects/index.html"><strong>Portfolio</strong><span>记录可复现的统计编程项目、公开代码与验证过程。</span></a>
+<a href="tools/index.html"><strong>Interactive Tools</strong><span>用浏览器交互式计算器探索事件数与试验设计参数。</span></a>
+:::
+
+## 最近整理的高频问题
+
+- [Promising Zone扩样后，为什么不能总用普通检验？](questions/catalog.qmd)
+- [新抗肿瘤治疗后，PFS/OS如何处理？](questions/catalog.qmd)
+- [敏感性分析与补充分析有什么区别？](questions/catalog.qmd)
+- [MMRM的US协方差结构不收敛，如何处理？](questions/catalog.qmd)
+
+## 推荐知识文章
+
+- [事件数与样本量计算](knowledge/design/sample-size.qmd)
+- [Log-rank 与生存分析](knowledge/methods/survival.qmd)
+- [Promising Zone 与一类错误率控制](knowledge/adaptive/pz.qmd)
+
+::: {.callout-note}
+## 内容声明
+问答根据以往讨论主题**重新表述**，并非聊天的逐字转录。示例只用于学习，不包含真实试验的保密数据；正式研究设计请核查原始指南、文献、方案及统计分析计划。
+:::
+
+
+## 公开站点与私人知识库
+
+此站展示公开、经审阅的统计文章、技术项目和[专业问答](questions/review.html)。私人历史问题与个人复习笔记存放在独立的加密本地知识库内，**不会通过 GitHub Pages 发布**。

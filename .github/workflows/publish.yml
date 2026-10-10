@@ -1,0 +1,29 @@
+name: Publish Quarto Website
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+      - name: Generate Q&A catalog and review app
+        run: python scripts/build_questions.py
+      - name: Check publication boundary
+        run: python scripts/check_publication.py
+      # First local `quarto publish gh-pages` creates _publish.yml.
+      # Skip initial repository push before this config exists.
+      - name: Publish to gh-pages
+        if: ${{ hashFiles('_publish.yml') != '' }}
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

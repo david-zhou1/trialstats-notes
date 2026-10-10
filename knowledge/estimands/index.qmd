@@ -1,0 +1,13 @@
+---
+title: "Endpoints & Estimands"
+---
+
+## 计划内容
+
+- ICH E9(R1) 的五个 estimand 属性
+- 治疗政策、假设性、复合变量、治疗期间及主层策略
+- OS、PFS、ORR、DOR 等终点的定义与评估者
+- Intercurrent Events 与 Missing Data 的区别
+- 主要分析、敏感性分析和补充分析的不同用途
+
+> 本页属于栏目规划，正式文章应核对 ICH 原始指导原则和最新适用版本。

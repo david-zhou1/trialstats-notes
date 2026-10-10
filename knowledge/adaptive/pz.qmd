@@ -1,0 +1,20 @@
+---
+title: "Promising Zone 样本量再估计"
+categories: [Adaptive Design, Conditional Power]
+---
+
+## 研究问题
+
+在预先规定的期中分析中，当观察到的疗效处于有希望但证据仍不足的区域时，能否增加信息量（事件数），同时维持总体一类错误率？
+
+## 必须明确的统计要点
+
+1. Conditional Power 依赖期中统计量、后续效应假设和最终判定规则。
+2. 再估计规则应预先描述区间、扩样上限、整数调整及停止条件。
+3. 自适应后沿用原固定设计的检验界值通常不能自动保证一类错误率控制。
+4. 应核查所用组合检验或 Conditional Error 方法的适用条件，并模拟验证。
+
+## 进一步阅读
+
+- [Inverse-normal 组合检验专题框架](../../topics/pz-inverse-normal.qmd)
+- [PZ 模拟项目页模板](../../projects/pz-simulation.qmd)

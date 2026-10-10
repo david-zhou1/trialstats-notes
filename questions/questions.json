@@ -1,0 +1,684 @@
+[
+  {
+    "id": "Q001",
+    "category": "设计与样本量",
+    "question": "生存终点研究中，事件数与样本量有什么区别？",
+    "short": "事件数决定主要统计检验的信息量；样本量则是为在给定入组、随访和脱落条件下观察到所需事件而入组的人数。",
+    "detail": "通常先根据 HR、α、把握度、随机比例与检验形式估计目标事件数，再结合基线风险、入组历程、分析截点、脱落及交叉等假设反推样本量。相同事件数可以对应不同样本量。",
+    "pitfall": "不能简单将事件数除以预期事件发生率而忽略入组时间和随访分布。",
+    "tags": [
+      "PFS",
+      "OS",
+      "Log-rank",
+      "事件驱动"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "ICH E9 / EMA",
+        "url": "https://www.ema.europa.eu/en/scientific-guidelines/ich-e9-statistical-principles-clinical-trials"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q002",
+    "category": "设计与样本量",
+    "question": "为什么 PASS 与 rpact 计算的样本量可能不一样？",
+    "short": "先核对两者是否采用相同的统计假设、检验框架、舍入规则和入组/随访模型。",
+    "detail": "检查 HR、基线中位生存期、单双侧 α、把握度、随机比例、是否包含期中分析、入组速度、脱落概率的时间单位、研究结束时点。即使目标事件数接近，整数舍入和事件概率模型也可能使 N 相差1–2例或更多。",
+    "pitfall": "不要只比较最终 N；同时对照所需事件数、研究时间与各时点事件概率。",
+    "tags": [
+      "PASS",
+      "rpact",
+      "样本量"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "rpact 官网",
+        "url": "https://www.rpact.org/"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q003",
+    "category": "设计与样本量",
+    "question": "固定5个月入组，与每月入组16例是什么关系？",
+    "short": "如果入组速率恒定，两者隐含总入组人数约为80例；如果总样本量另行固定，就要明确实际入组率或入组停止规则。",
+    "detail": "应区分固定入组期、固定样本量、预期速率这三个输入。建模时可以使用分段入组强度或非恒定入组曲线，不能将互相矛盾的参数同时作为精确约束。",
+    "pitfall": "每月16例×5个月=80例只是计划值，不代表最终随机人数必然恰好80。",
+    "tags": [
+      "入组",
+      "随访",
+      "样本量"
+    ],
+    "level": "基础",
+    "sources": [],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q004",
+    "category": "设计与样本量",
+    "question": "年化脱落率5%应如何用于事件驱动样本量计算？",
+    "short": "先确认软件参数表示的是年脱落概率还是恒定脱落风险率，并统一时间单位。",
+    "detail": "如假设脱落时间服从指数分布，年脱落概率为5%时，月风险率为−ln(0.95)/12；年风险率则是−ln(0.95)。部分软件使用脱落风险率及参考时间点，必须查看具体参数定义。",
+    "pitfall": "不要直接把“年脱落5%”不加转换地输入要求“每月风险率”的参数。",
+    "tags": [
+      "脱落",
+      "指数分布",
+      "rpact"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "rpact 官网",
+        "url": "https://www.rpact.org/"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q005",
+    "category": "设计与样本量",
+    "question": "PZ只算出要增加多少事件，如何推新增样本量？",
+    "short": "需要把新增事件目标接入完整的生存过程模拟，并考虑现有患者后续事件与新入组患者带来的事件。",
+    "detail": "以期中实际入组与随访状态为起点，假设各组风险、后续入组速率、脱落及截止规则，搜索满足目标事件数的额外入组人数或延长随访时间。新增事件不等于必须全部由新增患者贡献。",
+    "pitfall": "只用“新增事件数 ÷ 事件率”常会显著偏离事件驱动研究的日历预测。",
+    "tags": [
+      "PZ",
+      "扩样",
+      "事件驱动"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "FDA Adaptive Design Guidance",
+        "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/adaptive-design-clinical-trials-drugs-and-biologics-guidance-industry"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q006",
+    "category": "期中与自适应",
+    "question": "Conditional Power（CP）是什么？",
+    "short": "CP 是在期中已观测数据和指定的未来效应假设下，最终拒绝原假设的条件概率。",
+    "detail": "同一份期中数据在“当前趋势”“最初设计效应”“零效应”等未来假设下可能给出不同 CP。实际使用应同时固定最终检验规则、可追加信息量与后续设计。",
+    "pitfall": "CP 不是期中时“备择假设为真”的后验概率，也不是无需假设的固定数值。",
+    "tags": [
+      "CP",
+      "IA",
+      "PZ"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "FDA Adaptive Design Guidance",
+        "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/adaptive-design-clinical-trials-drugs-and-biologics-guidance-industry"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q007",
+    "category": "期中与自适应",
+    "question": "PZ 扩样后为什么不能总用原来的普通检验？",
+    "short": "因为根据未盲期中结果调整信息量可能改变最终检验统计量的零分布，未经校准会影响总体一类错误率。",
+    "detail": "常见保护策略有预先定义并验证的安全 PZ 规则、条件错误原则、逆正态组合检验或 CHW 型组合检验。是否可沿用原临界值取决于严格的设计条件，不能一概而论。",
+    "pitfall": "只看某一组情景下模拟 α 接近0.025，不足以证明任意扩样规则都严格有效。",
+    "tags": [
+      "PZ",
+      "Type I Error",
+      "CHW"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "FDA Adaptive Design Guidance",
+        "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/adaptive-design-clinical-trials-drugs-and-biologics-guidance-industry"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q008",
+    "category": "期中与自适应",
+    "question": "Inverse-Normal 组合检验为何需要预先规定权重？",
+    "short": "预先固定权重使阶段证据的组合形式可按预设零分布进行校准，避免根据疗效趋势再挑选有利权重。",
+    "detail": "常用形式为 Z = w₁Z₁ + w₂Z₂，且 w₁²+w₂²=1；需要保证各阶段 p 值的有效性及相应独立性/条件有效性。信息量改变后的组合检验与普通累计 log-rank 统计量并非同一个检验。",
+    "pitfall": "不能因为第二阶段新增更多事件，就自行把固定权重改成按最终事件数重估的权重。",
+    "tags": [
+      "Inverse Normal",
+      "CHW",
+      "权重"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "FDA Adaptive Design Guidance",
+        "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/adaptive-design-clinical-trials-drugs-and-biologics-guidance-industry"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q009",
+    "category": "期中与自适应",
+    "question": "生存数据的独立增量与“各次累计 Z 独立”是一样的吗？",
+    "short": "不是。适当条件下独立的是不同阶段的 score 信息增量；累计统计量之间通常相关。",
+    "detail": "在经典 canonical joint distribution 近似下，若 i<j，Corr(Zᵢ,Zⱼ)=√(Iᵢ/Iⱼ)。因此模拟组序贯检验时要使用联合分布或独立增量构造，而不能将每次累计 Z 独立抽样。",
+    "pitfall": "不要把“log-rank 有独立增量性质”理解成“每次期中累计 Z 互不相关”。",
+    "tags": [
+      "Log-rank",
+      "Independent increments",
+      "GSD"
+    ],
+    "level": "中级",
+    "sources": [],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q010",
+    "category": "期中与自适应",
+    "question": "累计 α-spending 与某次检验的局部 α 相同吗？",
+    "short": "不同。累计 α 消耗描述截至某次分析前总体已花费的一类错误率；局部拒绝概率是结合此前未越界条件得到的阶段量。",
+    "detail": "组序贯边界通常需要在累计统计量的相关联合分布下求解，不能直接对某次累计 α 使用 qnorm(1−α(t)) 当作有效的该次 Z 界值。",
+    "pitfall": "累计 α、增量 α、名义 p 值是不同概念，表格应明确各自定义。",
+    "tags": [
+      "alpha spending",
+      "GSD",
+      "boundary"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "FDA Adaptive Design Guidance",
+        "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/adaptive-design-clinical-trials-drugs-and-biologics-guidance-industry"
+      },
+      {
+        "name": "rpact 官网",
+        "url": "https://www.rpact.org/"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q011",
+    "category": "期中与自适应",
+    "question": "Monte Carlo Standard Error（MCSE）怎样解释？",
+    "short": "对二项事件（如是否拒绝 H₀），MCSE≈√[p̂(1−p̂)/M]，M 为独立模拟次数。",
+    "detail": "若在 H₀ 下 100,000 次模拟得一类错误率0.025，MCSE约0.00049，95%蒙特卡洛区间可近似写为 p̂±1.96×MCSE。区间反映的是模拟误差，而不是设计参数本身的真实不确定性。",
+    "pitfall": "不要把模拟置信区间误认为对真实治疗效应的置信区间。",
+    "tags": [
+      "Simulation",
+      "Type I Error",
+      "MCSE"
+    ],
+    "level": "基础",
+    "sources": [],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q012",
+    "category": "期中与自适应",
+    "question": "Binding 与 Non-binding futility boundary 有何区别？",
+    "short": "Binding 无效性边界属于正式预定并用于控制错误率的决策规则；Non-binding 边界允许不依边界停试，效能边界通常仍需维持一类错误率控制。",
+    "detail": "设计软件中的效能边界、实际决策权限及其对 α 计算的影响应保持一致。报告 power 时要区分采用/不采用无效性停止规则的场景。",
+    "pitfall": "不能把 non-binding 解释为期中分析后可以随意改变检验或主要终点。",
+    "tags": [
+      "GSD",
+      "Futility"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "FDA Adaptive Design Guidance",
+        "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/adaptive-design-clinical-trials-drugs-and-biologics-guidance-industry"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q013",
+    "category": "终点与估计目标",
+    "question": "Estimand 与 Intercurrent Event（ICE）是什么关系？",
+    "short": "Estimand 是明确要估计的治疗效应；ICE 是治疗开始后发生、会影响终点解释或观察的事件，需要在 estimand 中预先规定处理策略。",
+    "detail": "ICH E9(R1) 框架通常描述治疗条件、目标人群、变量（终点）、ICE 策略和群体水平汇总指标。ICE 可能包括停药、换药、开始其他治疗等，但具体是否属于 ICE 取决于研究问题。",
+    "pitfall": "“缺失值”和“ICE”不是同义词；ICE 也不一定意味着后续数据必须删失。",
+    "tags": [
+      "ICH E9(R1)",
+      "Estimand",
+      "ICE"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "ICH E9(R1) / FDA",
+        "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/e9r1-statistical-principles-clinical-trials-addendum-estimands-and-sensitivity-analysis-clinical"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q014",
+    "category": "终点与估计目标",
+    "question": "开始新的抗肿瘤治疗后，PFS/OS 如何处理？",
+    "short": "首先由 estimand 决定：治疗策略可能继续考虑新治疗后的结局；假想策略则关注如果未发生新治疗时的结局，需要相应推断。",
+    "detail": "不能仅因受试者用了新药便自动删失。对于 PFS，若方案采用“新治疗前最后一次无进展评估处删失”，需认识到这代表特定分析规则，且可能引入有信息删失等问题。OS 的新治疗后死亡是否计入也取决于对应 estimand；治疗策略通常计入。",
+    "pitfall": "删失规则必须与临床问题、数据收集及估计目标一致；不同主要/敏感性分析可以采用不同的事先定义规则。",
+    "tags": [
+      "PFS",
+      "OS",
+      "ICE",
+      "Censoring"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "ICH E9(R1) / FDA",
+        "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/e9r1-statistical-principles-clinical-trials-addendum-estimands-and-sensitivity-analysis-clinical"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q015",
+    "category": "终点与估计目标",
+    "question": "敏感性分析与补充分析有何区别？",
+    "short": "敏感性分析检验对同一 estimand 的估计在关键统计假设变化下是否稳健；补充分析通常回答其他 estimand 或提供其他有意义的治疗效应视角。",
+    "detail": "例如在同一 estimand 下改变对缺失值分布的假设属于敏感性分析；改用不同 ICE 策略讨论另一个治疗效应问题通常是补充分析。具体术语应遵循 ICH E9(R1) 与 SAP。",
+    "pitfall": "更换统计模型并不必然叫敏感性分析；关键是估计目标是否不变。",
+    "tags": [
+      "Sensitivity",
+      "Supplementary",
+      "Estimand"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "ICH E9(R1) / FDA",
+        "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/e9r1-statistical-principles-clinical-trials-addendum-estimands-and-sensitivity-analysis-clinical"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q016",
+    "category": "终点与估计目标",
+    "question": "PFS中进展前死亡，算事件还是ICE？",
+    "short": "在常规定义的 PFS 中，疾病进展或全因死亡（以先发生者为准）构成复合终点事件；进展前死亡通常本身就是 PFS 事件。",
+    "detail": "需以研究方案对 PFS 的定义、影像评估窗口、缺失访视及删失规则为准。与此不同，开始新抗肿瘤治疗、停止研究药物等可能构成 ICE。",
+    "pitfall": "不要把死亡同时当作 PFS 事件和一般性的“需删失ICE”而产生自相矛盾的处理。",
+    "tags": [
+      "PFS",
+      "Death",
+      "ICE"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "ICH E9(R1) / FDA",
+        "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/e9r1-statistical-principles-clinical-trials-addendum-estimands-and-sensitivity-analysis-clinical"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q017",
+    "category": "终点与估计目标",
+    "question": "BICR 与研究者评估有什么区别？",
+    "short": "BICR 是盲态独立中心影像审查；研究者评估由研究现场完成，两者可能使用相同影像但判读流程和盲态管理不同。",
+    "detail": "需要明确评估标准（如 RECIST）、评估时间、影像缺失处理、进展判定和潜在信息性评估偏差。何者作为主要终点分析依据由方案预先规定。",
+    "pitfall": "BICR 并不自动意味着其结果完全无误，也不能与 IRC 的所有具体组织形式画等号。",
+    "tags": [
+      "BICR",
+      "IRC",
+      "PFS"
+    ],
+    "level": "基础",
+    "sources": [],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q018",
+    "category": "终点与估计目标",
+    "question": "OS 中因 COVID-19 感染死亡要不要计入事件？",
+    "short": "若 OS 定义为从随机化到任何原因死亡，则 COVID-19 相关死亡通常也属于 OS 事件。",
+    "detail": "如果研究专门采用其他死亡定义或因果问题，需要明确相应 estimand；分析缺失或竞争事件的问题不能混同于全因 OS。",
+    "pitfall": "不要根据死亡原因擅自删除 OS 事件。",
+    "tags": [
+      "OS",
+      "Death"
+    ],
+    "level": "基础",
+    "sources": [
+      {
+        "name": "ICH E9 / EMA",
+        "url": "https://www.ema.europa.eu/en/scientific-guidelines/ich-e9-statistical-principles-clinical-trials"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q019",
+    "category": "统计分析",
+    "question": "MMRM 应分析 AVAL 还是 CHG？",
+    "short": "取决于预先指定的模型和研究目标；很多纵向疗效分析使用 CHG 并纳入 BASE 协变量，但 AVAL 亦可在相应模型下使用。",
+    "detail": "如果因变量是 CHG，报告的 LS Mean 通常可解释为经协变量调整的较基线变化；若因变量是 AVAL，解释是调整后的绝对测量值。基线作为协变量与把基线访视也作为响应变量还涉及不同建模框架。",
+    "pitfall": "图示均值±SE的原始描述性统计与 MMRM 模型得到的 LS Mean 不应混称。",
+    "tags": [
+      "MMRM",
+      "CHG",
+      "AVAL"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "mmrm R 包",
+        "url": "https://cran.r-project.org/package=mmrm"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q020",
+    "category": "统计分析",
+    "question": "MMRM 的非结构化协方差不收敛，能直接改成 AR(1) 吗？",
+    "short": "可以将 AR(1)、AR1H 等作为预先规定或有依据的备选结构，但不能仅因一种模型不收敛就无说明地任选最有利的模型。",
+    "detail": "先检查访视水平、重复记录、样本量/参数数目、协变量缺失、稀疏亚组与优化器提示。备选协方差结构的选择应按 SAP 或客观拟合准则说明，必要时做稳健性比较。",
+    "pitfall": "拟合成功不等于模型假设被证明正确；特别是小样本/稀疏访视。",
+    "tags": [
+      "MMRM",
+      "AR1H",
+      "US",
+      "Convergence"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "mmrm R 包",
+        "url": "https://cran.r-project.org/package=mmrm"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q021",
+    "category": "统计分析",
+    "question": "MMRM 能自动解决所有缺失数据吗？",
+    "short": "不能。基于似然的传统 MMRM 通常在适当的 MAR 等假设下处理部分纵向观测缺失；若 MNAR 可能重要，仍需敏感性分析。",
+    "detail": "分析应关注缺失机制、ICE、评估窗口和模型是否与 estimand 一致。可根据研究场景采用 pattern-mixture、reference-based imputation、tipping-point 等敏感性分析。",
+    "pitfall": "“使用 MMRM”不能替代对缺失机制与 ICE 的正式讨论。",
+    "tags": [
+      "MMRM",
+      "Missing Data",
+      "MAR",
+      "MNAR"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "ICH E9(R1) / FDA",
+        "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/e9r1-statistical-principles-clinical-trials-addendum-estimands-and-sensitivity-analysis-clinical"
+      },
+      {
+        "name": "mmrm R 包",
+        "url": "https://cran.r-project.org/package=mmrm"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q022",
+    "category": "统计分析",
+    "question": "分层 CMH 与普通比例比较有什么不同？",
+    "short": "CMH 在预先指定的分层因素下综合各层的组间关联信息，可减少分层不平衡导致的影响。",
+    "detail": "适用性取决于结果类型、层内样本量、层间效应一致性等；对极稀疏层或非同质的效应，需要考虑替代方法或敏感性分析。",
+    "pitfall": "不能因为随机化分层了就忽略分析时明确规定的分层因素，也不能无条件认为 CMH 优于所有模型。",
+    "tags": [
+      "CMH",
+      "Stratification"
+    ],
+    "level": "基础",
+    "sources": [],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q023",
+    "category": "临床试验实践",
+    "question": "同一个一线研究可以设置两种标准治疗作为阳性对照吗？",
+    "short": "可以设计研究者选择的多种标准治疗作为一个对照策略，但必须有明确的临床合理性、预先规定的选择规则及可解释的总体治疗对比。",
+    "detail": "重点包括治疗选择发生在何时、是否按对照方案分层、各方案是否为同一临床问题的合理标准治疗，以及入组地区/人群差异和估计目标的一致性。另设两个独立对照组是不同设计。",
+    "pitfall": "不能由“有两种允许的化疗方案”直接推断研究设计必然含两个独立对照臂。",
+    "tags": [
+      "1L",
+      "Control",
+      "SOC"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "ICH E9 / EMA",
+        "url": "https://www.ema.europa.eu/en/scientific-guidelines/ich-e9-statistical-principles-clinical-trials"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q024",
+    "category": "临床试验实践",
+    "question": "FP 与 CAPOX 在方案里算两个阳性对照组吗？",
+    "short": "通常先区分“允许的两种化疗方案”和“两个独立随机对照臂”，不能仅凭名称判断。",
+    "detail": "FP 是含氟嘧啶类化疗的方案缩写，具体成分需看方案定义；CAPOX 通常指卡培他滨联合奥沙利铂。如果协议规定由研究者在随机化前从两种方案中选择，可能仍属于一个标准治疗对照策略。",
+    "pitfall": "不要把化疗 backbone 与独立随机化分组混为一谈。",
+    "tags": [
+      "FP",
+      "CAPOX",
+      "Control"
+    ],
+    "level": "基础",
+    "sources": [],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q025",
+    "category": "临床试验实践",
+    "question": "卡度尼利单抗是什么类型的药物？",
+    "short": "卡度尼利单抗（cadonilimab，AK104）是同时靶向 PD-1 和 CTLA-4 的双特异性抗体。",
+    "detail": "讨论具体试验方案时，还要单独确认适应证、研究线次、联合化疗背景和对照治疗。药物类别不能决定某一线标准治疗的合规性。",
+    "pitfall": "不要把它简单标为单靶点 PD-1 单抗。",
+    "tags": [
+      "PD-1",
+      "CTLA-4",
+      "免疫治疗"
+    ],
+    "level": "基础",
+    "sources": [],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q026",
+    "category": "临床试验实践",
+    "question": "CRS 与 ORR 有什么关系？",
+    "short": "CRS（细胞因子释放综合征）主要是安全性事件，ORR（客观缓解率）是抗肿瘤疗效终点；二者不是同一种指标。",
+    "detail": "可以在特定治疗类型中同时评估 CRS 的发生率、分级及管理与 ORR，但不能用一个替代另一个。分析人群、观察窗口和分母通常也可能不同。",
+    "pitfall": "绘制 ORR 疗效数据时不应无依据地把 CRS 当作疗效成分。",
+    "tags": [
+      "CRS",
+      "ORR",
+      "Safety"
+    ],
+    "level": "基础",
+    "sources": [],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q027",
+    "category": "临床试验实践",
+    "question": "盲法研究中不同剂量/剂型的药物如何维持盲态？",
+    "short": "必须从包装、给药、配制及供应流程出发建立可执行的盲态管理，不能仅靠文字宣布“双盲”。",
+    "detail": "若给药体积、配制流程或外观可能暴露分组，可采用匹配安慰剂、双模拟、受限非盲药师/配药团队、独立IRT管理等具体方案。必须规定紧急揭盲及相关记录流程。",
+    "pitfall": "“剂量不同”不一定等于剂型不同，不能用剂型一词笼统代替剂量。",
+    "tags": [
+      "Blinding",
+      "IRT",
+      "Double dummy"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "ICH E9 / EMA",
+        "url": "https://www.ema.europa.eu/en/scientific-guidelines/ich-e9-statistical-principles-clinical-trials"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q028",
+    "category": "临床试验实践",
+    "question": "FPI、SIV 分别代表什么？",
+    "short": "FPI 通常指 First Patient In（首例受试者入组，某些组织定义为首例随机化）；SIV 指 Site Initiation Visit（中心启动访视）。",
+    "detail": "项目指标需在团队 SOP 中明确 FPI 的起算点，例如首例签署知情同意、筛选、入组或随机化，并与操作性时间节点保持一致。",
+    "pitfall": "不同组织的 FPI 口径可能不同，报告前应确认定义。",
+    "tags": [
+      "FPI",
+      "SIV",
+      "Operations"
+    ],
+    "level": "基础",
+    "sources": [],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q029",
+    "category": "数据与编程",
+    "question": "受试者跃迁到新剂量组后，如何重新画纵向疗效曲线？",
+    "short": "如果分析目的将跃迁后视为新的暴露阶段，可构建独立的阶段性分析 ID、以跃迁后预定基线重新计算时间和变化量。",
+    "detail": "保留原始受试者 ID、原治疗阶段及跃迁日期用于追溯；明确跃迁后首次测量能否定义新基线、时间零点如何设定，以及纵向分析是否仍按原随机组进行。",
+    "pitfall": "绘图中把跃迁者当成“新的人”只是显示/分析单位变化，不等于临床上新增受试者，也不应悄悄重置 ITT 主分析。",
+    "tags": [
+      "Crossover",
+      "Baseline",
+      "Plot"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "ICH E9(R1) / FDA",
+        "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/e9r1-statistical-principles-clinical-trials-addendum-estimands-and-sensitivity-analysis-clinical"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q030",
+    "category": "数据与编程",
+    "question": "同一受试者同一访视有多条 BCVA/CRT 记录，如何选择？",
+    "short": "应依据 SAP 或访视窗口规则预先确定目标日、容许窗与并列时的选择优先级，保证每个受试者每个分析访视最多一条记录。",
+    "detail": "例如目标日与 AVISITN 关系、最近目标日、并列时优先较晚记录等规则可编程实现，但必须与研究规定一致；同时检查重复键、基线定义与数据类型。",
+    "pitfall": "“最接近目标日”是可用规则示例，不是所有研究都适用的默认标准。",
+    "tags": [
+      "BCVA",
+      "CRT",
+      "ADY",
+      "Visit window"
+    ],
+    "level": "中级",
+    "sources": [],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q031",
+    "category": "数据与编程",
+    "question": "FAS、ITT、PPS、SAF 能否直接互换？",
+    "short": "不能。ITT 是随机分组分析原则；FAS 为按方案定义、尽量接近 ITT 的分析集；PPS 和 SAF 有不同的纳入目标。",
+    "detail": "不同分析集的定义须由方案和 SAP 给出，例如 FAS 的最小条件、PPS 的重要方案违背排除规则、SAF 的至少接受一次研究治疗条件等。",
+    "pitfall": "不可简单把 FASFL==Y 等同于任何研究都严格使用完整 ITT。",
+    "tags": [
+      "ADSL",
+      "FAS",
+      "ITT",
+      "PPS",
+      "SAF"
+    ],
+    "level": "基础",
+    "sources": [
+      {
+        "name": "ICH E9 / EMA",
+        "url": "https://www.ema.europa.eu/en/scientific-guidelines/ich-e9-statistical-principles-clinical-trials"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q032",
+    "category": "数据与编程",
+    "question": "为什么纵向疗效图里的 n 要按访视重新统计？",
+    "short": "各访视实际有评价数据的人数可能不同，图上的 n 应当反映该访视、该组实际用于所展示统计量的非缺失人数。",
+    "detail": "需要先按受试者-访视择取记录，再在组内逐访视计算 n、均值和 SE；模型估计的有效样本量与描述性 n 可能不同。",
+    "pitfall": "不能将 FAS 总例数无条件重复显示在每个后续访视。",
+    "tags": [
+      "Longitudinal",
+      "BCVA",
+      "n"
+    ],
+    "level": "基础",
+    "sources": [],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  },
+  {
+    "id": "Q033",
+    "category": "数据与编程",
+    "question": "什么时候应该对缺失访视使用 LOCF？",
+    "short": "LOCF 是一种强假设的单次填补方法，不能仅因实现方便就作为默认主分析。",
+    "detail": "其适用性必须与 estimand、疾病自然进程及访视模式相一致；在很多纵向研究中可优先评估 MMRM、MI 或其他合适方法，并考虑 MNAR 敏感性分析。",
+    "pitfall": "LOCF 不等于无偏且不能保证估计结果稳健。",
+    "tags": [
+      "LOCF",
+      "Missing Data"
+    ],
+    "level": "中级",
+    "sources": [
+      {
+        "name": "ICH E9(R1) / FDA",
+        "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/e9r1-statistical-principles-clinical-trials-addendum-estimands-and-sensitivity-analysis-clinical"
+      }
+    ],
+    "origin": "根据既往讨论重述",
+    "review_status": "供复习；正式使用前核对方案及来源"
+  }
+]

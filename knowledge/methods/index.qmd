@@ -1,0 +1,11 @@
+---
+title: "统计分析方法"
+---
+
+## 计划内容
+
+- [生存分析：Log-rank、HR 与 Cox 模型](survival.qmd)
+- ANCOVA、MMRM 与重复测量数据
+- 分类终点：CMH、分层分析、Logistic Regression
+- 多重性与 Gatekeeping
+- 缺失数据：MI、MNAR 敏感性分析

@@ -1,0 +1,16 @@
+---
+title: "Clinical Trial Knowledge Base"
+---
+
+按**知识领域**组织的临床试验统计参考资料。基础知识与专题深度文章独立维护。
+
+| 一级栏目 | 关注的核心问题 |
+|---|---|
+| [临床试验设计](design/index.qmd) | 如何定义对照、随机化、样本量和分析时点？ |
+| [Estimands 与终点](estimands/index.qmd) | 我们真正希望估计的治疗效果是什么？ |
+| [统计分析方法](methods/index.qmd) | 使用何种检验、模型与效应量？ |
+| [自适应设计](adaptive/index.qmd) | 如何预设适应性规则并控制一类错误率？ |
+| [统计编程](programming/index.qmd) | 如何实现可靠、可复现的分析？ |
+| [指导原则](regulatory/index.qmd) | 哪些官方文件约束统计分析的具体实践？ |
+
+所有示例均仅用于方法教学，不包含非公开临床研究数据。

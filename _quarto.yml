@@ -1,0 +1,101 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - tools/event-calculator.html
+    - questions/review.html
+    - questions/public-qa.css
+    - questions/public-qa.js
+
+website:
+  title: "TrialStats Notes"
+  description: "Clinical Trial Design, Biostatistics and Statistical Computing"
+  search:
+    location: navbar
+    type: overlay
+  reader-mode: true
+  page-navigation: true
+  navbar:
+    background: light
+    left:
+      - text: "首页"
+        href: index.qmd
+      - text: "问题与标准回答"
+        href: questions/index.qmd
+      - text: "知识库"
+        href: knowledge/index.qmd
+      - text: "方法专题"
+        href: topics/index.qmd
+      - text: "技术项目"
+        href: projects/index.qmd
+      - text: "统计工具"
+        href: tools/index.qmd
+      - text: "关于"
+        href: about.qmd
+  sidebar:
+    - id: questions
+      title: "问题与标准回答"
+      style: docked
+      contents:
+        - questions/index.qmd
+        - text: "交互式问答复习"
+          href: questions/review.html
+        - questions/catalog.qmd
+    - id: knowledge
+      title: "知识库"
+      style: docked
+      collapse-level: 2
+      contents:
+        - knowledge/index.qmd
+        - section: "临床试验设计"
+          contents:
+            - knowledge/design/index.qmd
+            - knowledge/design/sample-size.qmd
+        - section: "Estimands 与终点"
+          contents:
+            - knowledge/estimands/index.qmd
+        - section: "统计分析方法"
+          contents:
+            - knowledge/methods/index.qmd
+            - knowledge/methods/survival.qmd
+        - section: "自适应设计"
+          contents:
+            - knowledge/adaptive/index.qmd
+            - knowledge/adaptive/pz.qmd
+        - section: "统计编程"
+          contents:
+            - knowledge/programming/index.qmd
+        - section: "指导原则"
+          contents:
+            - knowledge/regulatory/index.qmd
+    - id: topics
+      title: "方法专题"
+      contents:
+        - topics/index.qmd
+        - topics/pz-inverse-normal.qmd
+    - id: projects
+      title: "技术项目"
+      contents:
+        - projects/index.qmd
+        - projects/sample-size-workflow.qmd
+        - projects/pz-simulation.qmd
+    - id: tools
+      title: "统计工具"
+      contents:
+        - tools/index.qmd
+  page-footer:
+    left: "© TrialStats Notes · 统计学习与个人复习，不替代正式SAP或专业意见"
+    right: "Built with Quarto"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    code-fold: false
+    link-external-newwindow: true
+
+execute:
+  freeze: auto

@@ -1,0 +1,16 @@
+---
+title: "Tools / 交互式工具"
+---
+
+## 可以立即使用
+
+- [事件数计算器 — Schoenfeld 近似（浏览器端）](event-calculator.html)：无需服务器，按 1:1 分配计算生存终点近似所需总事件数。
+
+## 后续产品路线
+
+1. Group Sequential Boundaries：不同 Alpha Spending 方案对比
+2. Conditional Power Explorer：期中结果、假设效应与后续信息量的敏感性
+3. PZ Simulator：MCSE 与 Type I Error / Power 模拟
+4. MMRM Covariance Explorer：不同协方差结构的拟合与估计稳定性
+
+工具必须明确展示统计假设、软件版本和验证情况。正式设计需由合格统计师独立复核。
