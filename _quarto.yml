@@ -6,6 +6,11 @@ project:
     - questions/review.html
     - questions/public-qa.css
     - questions/public-qa.js
+    - questions/questions.json
+    - mindmap/editor.html
+    - mindmap/mindmap.css
+    - mindmap/mindmap.js
+    - mindmap/map.json
 
 website:
   title: "TrialStats Notes"
@@ -22,6 +27,8 @@ website:
         href: index.qmd
       - text: "问题与标准回答"
         href: questions/index.qmd
+      - text: "知识导图"
+        href: mindmap/editor.html
       - text: "知识库"
         href: knowledge/index.qmd
       - text: "方法专题"
