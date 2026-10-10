@@ -1,0 +1,680 @@
+[
+  {
+    "objectID": "topics/pz-inverse-normal.html",
+    "href": "topics/pz-inverse-normal.html",
+    "title": "Promising Zone + Inverse-Normal Combination",
+    "section": "",
+    "text": "状态：专题写作模板。 本文还不是已完成的研究结论。用于规划将来可公开的模拟研究。",
+    "crumbs": [
+      "方法专题",
+      "Promising Zone + Inverse-Normal Combination"
+    ]
+  },
+  {
+    "objectID": "topics/pz-inverse-normal.html#问题定义",
+    "href": "topics/pz-inverse-normal.html#问题定义",
+    "title": "Promising Zone + Inverse-Normal Combination",
+    "section": "1. 问题定义",
+    "text": "1. 问题定义\n说明原设计、期中时点、调整目标、扩样上限与预期使用场景。",
+    "crumbs": [
+      "方法专题",
+      "Promising Zone + Inverse-Normal Combination"
+    ]
+  },
+  {
+    "objectID": "topics/pz-inverse-normal.html#两阶段统计量",
+    "href": "topics/pz-inverse-normal.html#两阶段统计量",
+    "title": "Promising Zone + Inverse-Normal Combination",
+    "section": "2. 两阶段统计量",
+    "text": "2. 两阶段统计量\n在可建立有效独立阶段性 \\(p\\) 值的前提下，预先给定组合权重 \\(w_1,w_2\\)，且 \\(w_1^2+w_2^2=1\\)：\n\\[\nZ_{\\mathrm{comb}}=w_1\\Phi^{-1}(1-p_1)+w_2\\Phi^{-1}(1-p_2).\n\\]\n实际实施必须确保阶段性检验的有效性与组合检验所要求的条件，而不能只通过形式上的权重加总来保证 Type I Error 控制。",
+    "crumbs": [
+      "方法专题",
+      "Promising Zone + Inverse-Normal Combination"
+    ]
+  },
+  {
+    "objectID": "topics/pz-inverse-normal.html#规则定义",
+    "href": "topics/pz-inverse-normal.html#规则定义",
+    "title": "Promising Zone + Inverse-Normal Combination",
+    "section": "3. 规则定义",
+    "text": "3. 规则定义\n列出 CP 区间划分、事件数调整规则、最大信息量、最低/最高限制和例外情形。",
+    "crumbs": [
+      "方法专题",
+      "Promising Zone + Inverse-Normal Combination"
+    ]
+  },
+  {
+    "objectID": "topics/pz-inverse-normal.html#模拟研究设计",
+    "href": "topics/pz-inverse-normal.html#模拟研究设计",
+    "title": "Promising Zone + Inverse-Normal Combination",
+    "section": "4. 模拟研究设计",
+    "text": "4. 模拟研究设计\n区分原假设情景（Type I Error）和备择假设情景（Power），设置足够迭代次数并报告 MCSE。",
+    "crumbs": [
+      "方法专题",
+      "Promising Zone + Inverse-Normal Combination"
+    ]
+  },
+  {
+    "objectID": "topics/pz-inverse-normal.html#报告规范",
+    "href": "topics/pz-inverse-normal.html#报告规范",
+    "title": "Promising Zone + Inverse-Normal Combination",
+    "section": "5. 报告规范",
+    "text": "5. 报告规范\n展示：场景与输入参数、随机种子、误差定义、MCSE、R 版本、包版本、代码仓库、局限性。",
+    "crumbs": [
+      "方法专题",
+      "Promising Zone + Inverse-Normal Combination"
+    ]
+  },
+  {
+    "objectID": "tools/index.html",
+    "href": "tools/index.html",
+    "title": "Tools / 交互式工具",
+    "section": "",
+    "text": "事件数计算器 — Schoenfeld 近似（浏览器端）：无需服务器，按 1:1 分配计算生存终点近似所需总事件数。",
+    "crumbs": [
+      "统计工具",
+      "Tools / 交互式工具"
+    ]
+  },
+  {
+    "objectID": "tools/index.html#可以立即使用",
+    "href": "tools/index.html#可以立即使用",
+    "title": "Tools / 交互式工具",
+    "section": "",
+    "text": "事件数计算器 — Schoenfeld 近似（浏览器端）：无需服务器，按 1:1 分配计算生存终点近似所需总事件数。",
+    "crumbs": [
+      "统计工具",
+      "Tools / 交互式工具"
+    ]
+  },
+  {
+    "objectID": "tools/index.html#后续产品路线",
+    "href": "tools/index.html#后续产品路线",
+    "title": "Tools / 交互式工具",
+    "section": "后续产品路线",
+    "text": "后续产品路线\n\nGroup Sequential Boundaries：不同 Alpha Spending 方案对比\nConditional Power Explorer：期中结果、假设效应与后续信息量的敏感性\nPZ Simulator：MCSE 与 Type I Error / Power 模拟\nMMRM Covariance Explorer：不同协方差结构的拟合与估计稳定性\n\n工具必须明确展示统计假设、软件版本和验证情况。正式设计需由合格统计师独立复核。",
+    "crumbs": [
+      "统计工具",
+      "Tools / 交互式工具"
+    ]
+  },
+  {
+    "objectID": "questions/catalog.html",
+    "href": "questions/catalog.html",
+    "title": "问题与标准回答 · 公开索引",
+    "section": "",
+    "text": "仅收录公开专业知识；不包含个人笔记。发布前需重新审核问题及相关来源。",
+    "crumbs": [
+      "问题与标准回答",
+      "问题与标准回答 · 公开索引"
+    ]
+  },
+  {
+    "objectID": "questions/catalog.html#设计与样本量",
+    "href": "questions/catalog.html#设计与样本量",
+    "title": "问题与标准回答 · 公开索引",
+    "section": "设计与样本量",
+    "text": "设计与样本量\n\nQ001 · 生存终点研究中，事件数与样本量有什么区别？\n推荐回答： 事件数决定主要统计检验的信息量；样本量则是为在给定入组、随访和脱落条件下观察到所需事件而入组的人数。\n进一步解释： 通常先根据 HR、α、把握度、随机比例与检验形式估计目标事件数，再结合基线风险、入组历程、分析截点、脱落及交叉等假设反推样本量。相同事件数可以对应不同样本量。\n常见误区： 不能简单将事件数除以预期事件发生率而忽略入组时间和随访分布。\n参考：ICH E9 / EMA\n\n\nQ002 · 为什么 PASS 与 rpact 计算的样本量可能不一样？\n推荐回答： 先核对两者是否采用相同的统计假设、检验框架、舍入规则和入组/随访模型。\n进一步解释： 检查 HR、基线中位生存期、单双侧 α、把握度、随机比例、是否包含期中分析、入组速度、脱落概率的时间单位、研究结束时点。即使目标事件数接近，整数舍入和事件概率模型也可能使 N 相差1–2例或更多。\n常见误区： 不要只比较最终 N；同时对照所需事件数、研究时间与各时点事件概率。\n参考：rpact 官网\n\n\nQ003 · 固定5个月入组，与每月入组16例是什么关系？\n推荐回答： 如果入组速率恒定，两者隐含总入组人数约为80例；如果总样本量另行固定，就要明确实际入组率或入组停止规则。\n进一步解释： 应区分固定入组期、固定样本量、预期速率这三个输入。建模时可以使用分段入组强度或非恒定入组曲线，不能将互相矛盾的参数同时作为精确约束。\n常见误区： 每月16例×5个月=80例只是计划值，不代表最终随机人数必然恰好80。\n\n\nQ004 · 年化脱落率5%应如何用于事件驱动样本量计算？\n推荐回答： 先确认软件参数表示的是年脱落概率还是恒定脱落风险率，并统一时间单位。\n进一步解释： 如假设脱落时间服从指数分布，年脱落概率为5%时，月风险率为−ln(0.95)/12；年风险率则是−ln(0.95)。部分软件使用脱落风险率及参考时间点，必须查看具体参数定义。\n常见误区： 不要直接把“年脱落5%”不加转换地输入要求“每月风险率”的参数。\n参考：rpact 官网\n\n\nQ005 · PZ只算出要增加多少事件，如何推新增样本量？\n推荐回答： 需要把新增事件目标接入完整的生存过程模拟，并考虑现有患者后续事件与新入组患者带来的事件。\n进一步解释： 以期中实际入组与随访状态为起点，假设各组风险、后续入组速率、脱落及截止规则，搜索满足目标事件数的额外入组人数或延长随访时间。新增事件不等于必须全部由新增患者贡献。\n常见误区： 只用“新增事件数 ÷ 事件率”常会显著偏离事件驱动研究的日历预测。\n参考：FDA Adaptive Design Guidance",
+    "crumbs": [
+      "问题与标准回答",
+      "问题与标准回答 · 公开索引"
+    ]
+  },
+  {
+    "objectID": "questions/catalog.html#期中与自适应",
+    "href": "questions/catalog.html#期中与自适应",
+    "title": "问题与标准回答 · 公开索引",
+    "section": "期中与自适应",
+    "text": "期中与自适应\n\nQ006 · Conditional Power（CP）是什么？\n推荐回答： CP 是在期中已观测数据和指定的未来效应假设下，最终拒绝原假设的条件概率。\n进一步解释： 同一份期中数据在“当前趋势”“最初设计效应”“零效应”等未来假设下可能给出不同 CP。实际使用应同时固定最终检验规则、可追加信息量与后续设计。\n常见误区： CP 不是期中时“备择假设为真”的后验概率，也不是无需假设的固定数值。\n参考：FDA Adaptive Design Guidance\n\n\nQ007 · PZ 扩样后为什么不能总用原来的普通检验？\n推荐回答： 因为根据未盲期中结果调整信息量可能改变最终检验统计量的零分布，未经校准会影响总体一类错误率。\n进一步解释： 常见保护策略有预先定义并验证的安全 PZ 规则、条件错误原则、逆正态组合检验或 CHW 型组合检验。是否可沿用原临界值取决于严格的设计条件，不能一概而论。\n常见误区： 只看某一组情景下模拟 α 接近0.025，不足以证明任意扩样规则都严格有效。\n参考：FDA Adaptive Design Guidance\n\n\nQ008 · Inverse-Normal 组合检验为何需要预先规定权重？\n推荐回答： 预先固定权重使阶段证据的组合形式可按预设零分布进行校准，避免根据疗效趋势再挑选有利权重。\n进一步解释： 常用形式为 Z = w₁Z₁ + w₂Z₂，且 w₁²+w₂²=1；需要保证各阶段 p 值的有效性及相应独立性/条件有效性。信息量改变后的组合检验与普通累计 log-rank 统计量并非同一个检验。\n常见误区： 不能因为第二阶段新增更多事件，就自行把固定权重改成按最终事件数重估的权重。\n参考：FDA Adaptive Design Guidance\n\n\nQ009 · 生存数据的独立增量与“各次累计 Z 独立”是一样的吗？\n推荐回答： 不是。适当条件下独立的是不同阶段的 score 信息增量；累计统计量之间通常相关。\n进一步解释： 在经典 canonical joint distribution 近似下，若 i&lt;j，Corr(Zᵢ,Zⱼ)=√(Iᵢ/Iⱼ)。因此模拟组序贯检验时要使用联合分布或独立增量构造，而不能将每次累计 Z 独立抽样。\n常见误区： 不要把“log-rank 有独立增量性质”理解成“每次期中累计 Z 互不相关”。\n\n\nQ010 · 累计 α-spending 与某次检验的局部 α 相同吗？\n推荐回答： 不同。累计 α 消耗描述截至某次分析前总体已花费的一类错误率；局部拒绝概率是结合此前未越界条件得到的阶段量。\n进一步解释： 组序贯边界通常需要在累计统计量的相关联合分布下求解，不能直接对某次累计 α 使用 qnorm(1−α(t)) 当作有效的该次 Z 界值。\n常见误区： 累计 α、增量 α、名义 p 值是不同概念，表格应明确各自定义。\n参考：FDA Adaptive Design Guidance；rpact 官网\n\n\nQ011 · Monte Carlo Standard Error（MCSE）怎样解释？\n推荐回答： 对二项事件（如是否拒绝 H₀），MCSE≈√[p̂(1−p̂)/M]，M 为独立模拟次数。\n进一步解释： 若在 H₀ 下 100,000 次模拟得一类错误率0.025，MCSE约0.00049，95%蒙特卡洛区间可近似写为 p̂±1.96×MCSE。区间反映的是模拟误差，而不是设计参数本身的真实不确定性。\n常见误区： 不要把模拟置信区间误认为对真实治疗效应的置信区间。\n\n\nQ012 · Binding 与 Non-binding futility boundary 有何区别？\n推荐回答： Binding 无效性边界属于正式预定并用于控制错误率的决策规则；Non-binding 边界允许不依边界停试，效能边界通常仍需维持一类错误率控制。\n进一步解释： 设计软件中的效能边界、实际决策权限及其对 α 计算的影响应保持一致。报告 power 时要区分采用/不采用无效性停止规则的场景。\n常见误区： 不能把 non-binding 解释为期中分析后可以随意改变检验或主要终点。\n参考：FDA Adaptive Design Guidance",
+    "crumbs": [
+      "问题与标准回答",
+      "问题与标准回答 · 公开索引"
+    ]
+  },
+  {
+    "objectID": "questions/catalog.html#终点与估计目标",
+    "href": "questions/catalog.html#终点与估计目标",
+    "title": "问题与标准回答 · 公开索引",
+    "section": "终点与估计目标",
+    "text": "终点与估计目标\n\nQ013 · Estimand 与 Intercurrent Event（ICE）是什么关系？\n推荐回答： Estimand 是明确要估计的治疗效应；ICE 是治疗开始后发生、会影响终点解释或观察的事件，需要在 estimand 中预先规定处理策略。\n进一步解释： ICH E9(R1) 框架通常描述治疗条件、目标人群、变量（终点）、ICE 策略和群体水平汇总指标。ICE 可能包括停药、换药、开始其他治疗等，但具体是否属于 ICE 取决于研究问题。\n常见误区： “缺失值”和“ICE”不是同义词；ICE 也不一定意味着后续数据必须删失。\n参考：ICH E9(R1) / FDA\n\n\nQ014 · 开始新的抗肿瘤治疗后，PFS/OS 如何处理？\n推荐回答： 首先由 estimand 决定：治疗策略可能继续考虑新治疗后的结局；假想策略则关注如果未发生新治疗时的结局，需要相应推断。\n进一步解释： 不能仅因受试者用了新药便自动删失。对于 PFS，若方案采用“新治疗前最后一次无进展评估处删失”，需认识到这代表特定分析规则，且可能引入有信息删失等问题。OS 的新治疗后死亡是否计入也取决于对应 estimand；治疗策略通常计入。\n常见误区： 删失规则必须与临床问题、数据收集及估计目标一致；不同主要/敏感性分析可以采用不同的事先定义规则。\n参考：ICH E9(R1) / FDA\n\n\nQ015 · 敏感性分析与补充分析有何区别？\n推荐回答： 敏感性分析检验对同一 estimand 的估计在关键统计假设变化下是否稳健；补充分析通常回答其他 estimand 或提供其他有意义的治疗效应视角。\n进一步解释： 例如在同一 estimand 下改变对缺失值分布的假设属于敏感性分析；改用不同 ICE 策略讨论另一个治疗效应问题通常是补充分析。具体术语应遵循 ICH E9(R1) 与 SAP。\n常见误区： 更换统计模型并不必然叫敏感性分析；关键是估计目标是否不变。\n参考：ICH E9(R1) / FDA\n\n\nQ016 · PFS中进展前死亡，算事件还是ICE？\n推荐回答： 在常规定义的 PFS 中，疾病进展或全因死亡（以先发生者为准）构成复合终点事件；进展前死亡通常本身就是 PFS 事件。\n进一步解释： 需以研究方案对 PFS 的定义、影像评估窗口、缺失访视及删失规则为准。与此不同，开始新抗肿瘤治疗、停止研究药物等可能构成 ICE。\n常见误区： 不要把死亡同时当作 PFS 事件和一般性的“需删失ICE”而产生自相矛盾的处理。\n参考：ICH E9(R1) / FDA\n\n\nQ017 · BICR 与研究者评估有什么区别？\n推荐回答： BICR 是盲态独立中心影像审查；研究者评估由研究现场完成，两者可能使用相同影像但判读流程和盲态管理不同。\n进一步解释： 需要明确评估标准（如 RECIST）、评估时间、影像缺失处理、进展判定和潜在信息性评估偏差。何者作为主要终点分析依据由方案预先规定。\n常见误区： BICR 并不自动意味着其结果完全无误，也不能与 IRC 的所有具体组织形式画等号。\n\n\nQ018 · OS 中因 COVID-19 感染死亡要不要计入事件？\n推荐回答： 若 OS 定义为从随机化到任何原因死亡，则 COVID-19 相关死亡通常也属于 OS 事件。\n进一步解释： 如果研究专门采用其他死亡定义或因果问题，需要明确相应 estimand；分析缺失或竞争事件的问题不能混同于全因 OS。\n常见误区： 不要根据死亡原因擅自删除 OS 事件。\n参考：ICH E9 / EMA",
+    "crumbs": [
+      "问题与标准回答",
+      "问题与标准回答 · 公开索引"
+    ]
+  },
+  {
+    "objectID": "questions/catalog.html#统计分析",
+    "href": "questions/catalog.html#统计分析",
+    "title": "问题与标准回答 · 公开索引",
+    "section": "统计分析",
+    "text": "统计分析\n\nQ019 · MMRM 应分析 AVAL 还是 CHG？\n推荐回答： 取决于预先指定的模型和研究目标；很多纵向疗效分析使用 CHG 并纳入 BASE 协变量，但 AVAL 亦可在相应模型下使用。\n进一步解释： 如果因变量是 CHG，报告的 LS Mean 通常可解释为经协变量调整的较基线变化；若因变量是 AVAL，解释是调整后的绝对测量值。基线作为协变量与把基线访视也作为响应变量还涉及不同建模框架。\n常见误区： 图示均值±SE的原始描述性统计与 MMRM 模型得到的 LS Mean 不应混称。\n参考：mmrm R 包\n\n\nQ020 · MMRM 的非结构化协方差不收敛，能直接改成 AR(1) 吗？\n推荐回答： 可以将 AR(1)、AR1H 等作为预先规定或有依据的备选结构，但不能仅因一种模型不收敛就无说明地任选最有利的模型。\n进一步解释： 先检查访视水平、重复记录、样本量/参数数目、协变量缺失、稀疏亚组与优化器提示。备选协方差结构的选择应按 SAP 或客观拟合准则说明，必要时做稳健性比较。\n常见误区： 拟合成功不等于模型假设被证明正确；特别是小样本/稀疏访视。\n参考：mmrm R 包\n\n\nQ021 · MMRM 能自动解决所有缺失数据吗？\n推荐回答： 不能。基于似然的传统 MMRM 通常在适当的 MAR 等假设下处理部分纵向观测缺失；若 MNAR 可能重要，仍需敏感性分析。\n进一步解释： 分析应关注缺失机制、ICE、评估窗口和模型是否与 estimand 一致。可根据研究场景采用 pattern-mixture、reference-based imputation、tipping-point 等敏感性分析。\n常见误区： “使用 MMRM”不能替代对缺失机制与 ICE 的正式讨论。\n参考：ICH E9(R1) / FDA；mmrm R 包\n\n\nQ022 · 分层 CMH 与普通比例比较有什么不同？\n推荐回答： CMH 在预先指定的分层因素下综合各层的组间关联信息，可减少分层不平衡导致的影响。\n进一步解释： 适用性取决于结果类型、层内样本量、层间效应一致性等；对极稀疏层或非同质的效应，需要考虑替代方法或敏感性分析。\n常见误区： 不能因为随机化分层了就忽略分析时明确规定的分层因素，也不能无条件认为 CMH 优于所有模型。",
+    "crumbs": [
+      "问题与标准回答",
+      "问题与标准回答 · 公开索引"
+    ]
+  },
+  {
+    "objectID": "questions/catalog.html#临床试验实践",
+    "href": "questions/catalog.html#临床试验实践",
+    "title": "问题与标准回答 · 公开索引",
+    "section": "临床试验实践",
+    "text": "临床试验实践\n\nQ023 · 同一个一线研究可以设置两种标准治疗作为阳性对照吗？\n推荐回答： 可以设计研究者选择的多种标准治疗作为一个对照策略，但必须有明确的临床合理性、预先规定的选择规则及可解释的总体治疗对比。\n进一步解释： 重点包括治疗选择发生在何时、是否按对照方案分层、各方案是否为同一临床问题的合理标准治疗，以及入组地区/人群差异和估计目标的一致性。另设两个独立对照组是不同设计。\n常见误区： 不能由“有两种允许的化疗方案”直接推断研究设计必然含两个独立对照臂。\n参考：ICH E9 / EMA\n\n\nQ024 · FP 与 CAPOX 在方案里算两个阳性对照组吗？\n推荐回答： 通常先区分“允许的两种化疗方案”和“两个独立随机对照臂”，不能仅凭名称判断。\n进一步解释： FP 是含氟嘧啶类化疗的方案缩写，具体成分需看方案定义；CAPOX 通常指卡培他滨联合奥沙利铂。如果协议规定由研究者在随机化前从两种方案中选择，可能仍属于一个标准治疗对照策略。\n常见误区： 不要把化疗 backbone 与独立随机化分组混为一谈。\n\n\nQ025 · 卡度尼利单抗是什么类型的药物？\n推荐回答： 卡度尼利单抗（cadonilimab，AK104）是同时靶向 PD-1 和 CTLA-4 的双特异性抗体。\n进一步解释： 讨论具体试验方案时，还要单独确认适应证、研究线次、联合化疗背景和对照治疗。药物类别不能决定某一线标准治疗的合规性。\n常见误区： 不要把它简单标为单靶点 PD-1 单抗。\n\n\nQ026 · CRS 与 ORR 有什么关系？\n推荐回答： CRS（细胞因子释放综合征）主要是安全性事件，ORR（客观缓解率）是抗肿瘤疗效终点；二者不是同一种指标。\n进一步解释： 可以在特定治疗类型中同时评估 CRS 的发生率、分级及管理与 ORR，但不能用一个替代另一个。分析人群、观察窗口和分母通常也可能不同。\n常见误区： 绘制 ORR 疗效数据时不应无依据地把 CRS 当作疗效成分。\n\n\nQ027 · 盲法研究中不同剂量/剂型的药物如何维持盲态？\n推荐回答： 必须从包装、给药、配制及供应流程出发建立可执行的盲态管理，不能仅靠文字宣布“双盲”。\n进一步解释： 若给药体积、配制流程或外观可能暴露分组，可采用匹配安慰剂、双模拟、受限非盲药师/配药团队、独立IRT管理等具体方案。必须规定紧急揭盲及相关记录流程。\n常见误区： “剂量不同”不一定等于剂型不同，不能用剂型一词笼统代替剂量。\n参考：ICH E9 / EMA\n\n\nQ028 · FPI、SIV 分别代表什么？\n推荐回答： FPI 通常指 First Patient In（首例受试者入组，某些组织定义为首例随机化）；SIV 指 Site Initiation Visit（中心启动访视）。\n进一步解释： 项目指标需在团队 SOP 中明确 FPI 的起算点，例如首例签署知情同意、筛选、入组或随机化，并与操作性时间节点保持一致。\n常见误区： 不同组织的 FPI 口径可能不同，报告前应确认定义。",
+    "crumbs": [
+      "问题与标准回答",
+      "问题与标准回答 · 公开索引"
+    ]
+  },
+  {
+    "objectID": "questions/catalog.html#数据与编程",
+    "href": "questions/catalog.html#数据与编程",
+    "title": "问题与标准回答 · 公开索引",
+    "section": "数据与编程",
+    "text": "数据与编程\n\nQ029 · 受试者跃迁到新剂量组后，如何重新画纵向疗效曲线？\n推荐回答： 如果分析目的将跃迁后视为新的暴露阶段，可构建独立的阶段性分析 ID、以跃迁后预定基线重新计算时间和变化量。\n进一步解释： 保留原始受试者 ID、原治疗阶段及跃迁日期用于追溯；明确跃迁后首次测量能否定义新基线、时间零点如何设定，以及纵向分析是否仍按原随机组进行。\n常见误区： 绘图中把跃迁者当成“新的人”只是显示/分析单位变化，不等于临床上新增受试者，也不应悄悄重置 ITT 主分析。\n参考：ICH E9(R1) / FDA\n\n\nQ030 · 同一受试者同一访视有多条 BCVA/CRT 记录，如何选择？\n推荐回答： 应依据 SAP 或访视窗口规则预先确定目标日、容许窗与并列时的选择优先级，保证每个受试者每个分析访视最多一条记录。\n进一步解释： 例如目标日与 AVISITN 关系、最近目标日、并列时优先较晚记录等规则可编程实现，但必须与研究规定一致；同时检查重复键、基线定义与数据类型。\n常见误区： “最接近目标日”是可用规则示例，不是所有研究都适用的默认标准。\n\n\nQ031 · FAS、ITT、PPS、SAF 能否直接互换？\n推荐回答： 不能。ITT 是随机分组分析原则；FAS 为按方案定义、尽量接近 ITT 的分析集；PPS 和 SAF 有不同的纳入目标。\n进一步解释： 不同分析集的定义须由方案和 SAP 给出，例如 FAS 的最小条件、PPS 的重要方案违背排除规则、SAF 的至少接受一次研究治疗条件等。\n常见误区： 不可简单把 FASFL==Y 等同于任何研究都严格使用完整 ITT。\n参考：ICH E9 / EMA\n\n\nQ032 · 为什么纵向疗效图里的 n 要按访视重新统计？\n推荐回答： 各访视实际有评价数据的人数可能不同，图上的 n 应当反映该访视、该组实际用于所展示统计量的非缺失人数。\n进一步解释： 需要先按受试者-访视择取记录，再在组内逐访视计算 n、均值和 SE；模型估计的有效样本量与描述性 n 可能不同。\n常见误区： 不能将 FAS 总例数无条件重复显示在每个后续访视。\n\n\nQ033 · 什么时候应该对缺失访视使用 LOCF？\n推荐回答： LOCF 是一种强假设的单次填补方法，不能仅因实现方便就作为默认主分析。\n进一步解释： 其适用性必须与 estimand、疾病自然进程及访视模式相一致；在很多纵向研究中可优先评估 MMRM、MI 或其他合适方法，并考虑 MNAR 敏感性分析。\n常见误区： LOCF 不等于无偏且不能保证估计结果稳健。\n参考：ICH E9(R1) / FDA",
+    "crumbs": [
+      "问题与标准回答",
+      "问题与标准回答 · 公开索引"
+    ]
+  },
+  {
+    "objectID": "projects/pz-simulation.html",
+    "href": "projects/pz-simulation.html",
+    "title": "PZ 扩样规则的 Monte Carlo 验证",
+    "section": "",
+    "text": "状态：项目页模板（非已完成成果）。",
+    "crumbs": [
+      "技术项目",
+      "PZ 扩样规则的 Monte Carlo 验证"
+    ]
+  },
+  {
+    "objectID": "projects/pz-simulation.html#问题",
+    "href": "projects/pz-simulation.html#问题",
+    "title": "PZ 扩样规则的 Monte Carlo 验证",
+    "section": "问题",
+    "text": "问题\n验证特定、预先定义的扩样规则和组合检验在原假设下的拒绝率，以及备择假设下的检验效能。",
+    "crumbs": [
+      "技术项目",
+      "PZ 扩样规则的 Monte Carlo 验证"
+    ]
+  },
+  {
+    "objectID": "projects/pz-simulation.html#项目应展示的证据",
+    "href": "projects/pz-simulation.html#项目应展示的证据",
+    "title": "PZ 扩样规则的 Monte Carlo 验证",
+    "section": "项目应展示的证据",
+    "text": "项目应展示的证据\n\n明确的设计输入和预先规定的决策规则\n一类错误率与 Power 的模拟流程图\n不同 HR 情景的结果表和 Monte Carlo 标准误\n可复现的 R 源码、环境信息与验证测试\n方法局限性及对独立增量假设的讨论\n\n\n使用合成数据和自行编写、可公开的代码替换具体企业项目资料。",
+    "crumbs": [
+      "技术项目",
+      "PZ 扩样规则的 Monte Carlo 验证"
+    ]
+  },
+  {
+    "objectID": "knowledge/regulatory/index.html",
+    "href": "knowledge/regulatory/index.html",
+    "title": "法规与指导原则",
+    "section": "",
+    "text": "以官方来源为准的索引页（计划持续更新）：\n\nICH E9：Clinical Trials 的统计原则\nICH E9(R1)：Estimands and Sensitivity Analysis\nICH E20：Adaptive Designs for Clinical Trials（核实地区实施状态和适用版本）\nFDA / EMA / NMPA 等机构发布的适用指导文件\n\n写文章时记录发布日期、版本、适用地区、更新日期，不要将草案当作最终生效文件。",
+    "crumbs": [
+      "知识库",
+      "指导原则",
+      "法规与指导原则"
+    ]
+  },
+  {
+    "objectID": "knowledge/methods/survival.html",
+    "href": "knowledge/methods/survival.html",
+    "title": "生存分析：Log-rank、Hazard Ratio 与 Cox",
+    "section": "",
+    "text": "Kaplan–Meier 曲线估计的是各时间点的生存函数 \\(S(t)\\)。\nLog-rank 检验用于比较组间生存经验；其检验结果不是效应量。\nCox 模型通常报告 HR 及其置信区间；比例风险假设的合理性应被评估。\n\n\\[S(t) = P(T&gt;t).\\]",
+    "crumbs": [
+      "知识库",
+      "统计分析方法",
+      "生存分析：Log-rank、Hazard Ratio 与 Cox"
+    ]
+  },
+  {
+    "objectID": "knowledge/methods/survival.html#方法要回答的问题",
+    "href": "knowledge/methods/survival.html#方法要回答的问题",
+    "title": "生存分析：Log-rank、Hazard Ratio 与 Cox",
+    "section": "",
+    "text": "Kaplan–Meier 曲线估计的是各时间点的生存函数 \\(S(t)\\)。\nLog-rank 检验用于比较组间生存经验；其检验结果不是效应量。\nCox 模型通常报告 HR 及其置信区间；比例风险假设的合理性应被评估。\n\n\\[S(t) = P(T&gt;t).\\]",
+    "crumbs": [
+      "知识库",
+      "统计分析方法",
+      "生存分析：Log-rank、Hazard Ratio 与 Cox"
+    ]
+  },
+  {
+    "objectID": "knowledge/methods/survival.html#r-代码示意请使用模拟或可公开数据",
+    "href": "knowledge/methods/survival.html#r-代码示意请使用模拟或可公开数据",
+    "title": "生存分析：Log-rank、Hazard Ratio 与 Cox",
+    "section": "R 代码示意（请使用模拟或可公开数据）",
+    "text": "R 代码示意（请使用模拟或可公开数据）\nlibrary(survival)\n# df 包含 time、event（1=事件，0=删失）、arm\nkm &lt;- survfit(Surv(time, event) ~ arm, data = df)\nlr &lt;- survdiff(Surv(time, event) ~ arm, data = df)\ncox &lt;- coxph(Surv(time, event) ~ arm, data = df)",
+    "crumbs": [
+      "知识库",
+      "统计分析方法",
+      "生存分析：Log-rank、Hazard Ratio 与 Cox"
+    ]
+  },
+  {
+    "objectID": "knowledge/methods/survival.html#常见陷阱",
+    "href": "knowledge/methods/survival.html#常见陷阱",
+    "title": "生存分析：Log-rank、Hazard Ratio 与 Cox",
+    "section": "常见陷阱",
+    "text": "常见陷阱\nHR 是相对瞬时风险，不等于风险比或中位生存时间比。违反比例风险假设时，应谨慎解释单一 HR 摘要。",
+    "crumbs": [
+      "知识库",
+      "统计分析方法",
+      "生存分析：Log-rank、Hazard Ratio 与 Cox"
+    ]
+  },
+  {
+    "objectID": "knowledge/index.html",
+    "href": "knowledge/index.html",
+    "title": "Clinical Trial Knowledge Base",
+    "section": "",
+    "text": "按知识领域组织的临床试验统计参考资料。基础知识与专题深度文章独立维护。\n\n\n\n一级栏目\n关注的核心问题\n\n\n\n\n临床试验设计\n如何定义对照、随机化、样本量和分析时点？\n\n\nEstimands 与终点\n我们真正希望估计的治疗效果是什么？\n\n\n统计分析方法\n使用何种检验、模型与效应量？\n\n\n自适应设计\n如何预设适应性规则并控制一类错误率？\n\n\n统计编程\n如何实现可靠、可复现的分析？\n\n\n指导原则\n哪些官方文件约束统计分析的具体实践？\n\n\n\n所有示例均仅用于方法教学，不包含非公开临床研究数据。",
+    "crumbs": [
+      "知识库",
+      "Clinical Trial Knowledge Base"
+    ]
+  },
+  {
+    "objectID": "knowledge/design/sample-size.html",
+    "href": "knowledge/design/sample-size.html",
+    "title": "生存终点的事件数与总样本量",
+    "section": "",
+    "text": "事件数主要由显著性水平、把握度、分配比例和假设 HR 决定；总样本量还取决于事件成熟概率、入组历程、随访时间和脱落等因素。两者不能直接等同。",
+    "crumbs": [
+      "知识库",
+      "临床试验设计",
+      "生存终点的事件数与总样本量"
+    ]
+  },
+  {
+    "objectID": "knowledge/design/sample-size.html#核心区别",
+    "href": "knowledge/design/sample-size.html#核心区别",
+    "title": "生存终点的事件数与总样本量",
+    "section": "",
+    "text": "事件数主要由显著性水平、把握度、分配比例和假设 HR 决定；总样本量还取决于事件成熟概率、入组历程、随访时间和脱落等因素。两者不能直接等同。",
+    "crumbs": [
+      "知识库",
+      "临床试验设计",
+      "生存终点的事件数与总样本量"
+    ]
+  },
+  {
+    "objectID": "knowledge/design/sample-size.html#常用近似公式",
+    "href": "knowledge/design/sample-size.html#常用近似公式",
+    "title": "生存终点的事件数与总样本量",
+    "section": "常用近似公式",
+    "text": "常用近似公式\n当采用 Log-rank 检验、比例风险假设、1:1 随机分组时，可以使用以下近似的总事件数公式：\n\\[\nD \\approx \\frac{4\\left(z_{1-\\alpha}+z_{1-\\beta}\\right)^2}{\\left(\\log HR\\right)^2}.\n\\]\n其中 \\(D\\) 为总事件数，\\(\\alpha\\) 是单侧显著性水平，\\(1-\\beta\\) 为把握度。这是规划阶段的近似，不等同于完整时间到事件设计模型。",
+    "crumbs": [
+      "知识库",
+      "临床试验设计",
+      "生存终点的事件数与总样本量"
+    ]
+  },
+  {
+    "objectID": "knowledge/design/sample-size.html#可复现-r-代码",
+    "href": "knowledge/design/sample-size.html#可复现-r-代码",
+    "title": "生存终点的事件数与总样本量",
+    "section": "可复现 R 代码",
+    "text": "可复现 R 代码\nrequired_events &lt;- function(hr = 0.70, power = 0.80, alpha = 0.025) {\n  stopifnot(hr &gt; 0, hr &lt; 1, power &gt; 0, power &lt; 1,\n            alpha &gt; 0, alpha &lt; 1)\n  ceiling(4 * (qnorm(1-alpha) + qnorm(power))^2 / log(hr)^2)\n}\nrequired_events()",
+    "crumbs": [
+      "知识库",
+      "临床试验设计",
+      "生存终点的事件数与总样本量"
+    ]
+  },
+  {
+    "objectID": "knowledge/design/sample-size.html#事件数如何换算样本量",
+    "href": "knowledge/design/sample-size.html#事件数如何换算样本量",
+    "title": "生存终点的事件数与总样本量",
+    "section": "事件数如何换算样本量？",
+    "text": "事件数如何换算样本量？\n实际设计还需要对入组速度、随访截点、对照组风险分布、竞争事件（如适用）和脱落机制建模。不同软件所计算出的样本量不一致时，应先检查这些输入参数及软件的模型设定。\n尝试 浏览器端事件数计算器，了解 HR、Power 和 Alpha 的敏感性。\n\n\n\n\n\n\nWarning\n\n\n\n该页面仅给出近似公式，不含事件驱动试验精确日历模型、组序贯边界或自适应修正；不应直接用作正式方案的样本量依据。",
+    "crumbs": [
+      "知识库",
+      "临床试验设计",
+      "生存终点的事件数与总样本量"
+    ]
+  },
+  {
+    "objectID": "knowledge/adaptive/pz.html",
+    "href": "knowledge/adaptive/pz.html",
+    "title": "Promising Zone 样本量再估计",
+    "section": "",
+    "text": "在预先规定的期中分析中，当观察到的疗效处于有希望但证据仍不足的区域时，能否增加信息量（事件数），同时维持总体一类错误率？",
+    "crumbs": [
+      "知识库",
+      "自适应设计",
+      "Promising Zone 样本量再估计"
+    ]
+  },
+  {
+    "objectID": "knowledge/adaptive/pz.html#研究问题",
+    "href": "knowledge/adaptive/pz.html#研究问题",
+    "title": "Promising Zone 样本量再估计",
+    "section": "",
+    "text": "在预先规定的期中分析中，当观察到的疗效处于有希望但证据仍不足的区域时，能否增加信息量（事件数），同时维持总体一类错误率？",
+    "crumbs": [
+      "知识库",
+      "自适应设计",
+      "Promising Zone 样本量再估计"
+    ]
+  },
+  {
+    "objectID": "knowledge/adaptive/pz.html#必须明确的统计要点",
+    "href": "knowledge/adaptive/pz.html#必须明确的统计要点",
+    "title": "Promising Zone 样本量再估计",
+    "section": "必须明确的统计要点",
+    "text": "必须明确的统计要点\n\nConditional Power 依赖期中统计量、后续效应假设和最终判定规则。\n再估计规则应预先描述区间、扩样上限、整数调整及停止条件。\n自适应后沿用原固定设计的检验界值通常不能自动保证一类错误率控制。\n应核查所用组合检验或 Conditional Error 方法的适用条件，并模拟验证。",
+    "crumbs": [
+      "知识库",
+      "自适应设计",
+      "Promising Zone 样本量再估计"
+    ]
+  },
+  {
+    "objectID": "knowledge/adaptive/pz.html#进一步阅读",
+    "href": "knowledge/adaptive/pz.html#进一步阅读",
+    "title": "Promising Zone 样本量再估计",
+    "section": "进一步阅读",
+    "text": "进一步阅读\n\nInverse-normal 组合检验专题框架\nPZ 模拟项目页模板",
+    "crumbs": [
+      "知识库",
+      "自适应设计",
+      "Promising Zone 样本量再估计"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "TrialStats Notes",
+    "section": "",
+    "text": "把临床试验工作中的每一次提问，整理成长期可搜索、可复习的统计知识。\n面向生物统计同行的个人知识库、方法学文章、编程项目与交互式工具。\n进入问答复习中心 →　浏览全部问答"
+  },
+  {
+    "objectID": "index.html#最近整理的高频问题",
+    "href": "index.html#最近整理的高频问题",
+    "title": "TrialStats Notes",
+    "section": "最近整理的高频问题",
+    "text": "最近整理的高频问题\n\nPromising Zone扩样后，为什么不能总用普通检验？\n新抗肿瘤治疗后，PFS/OS如何处理？\n敏感性分析与补充分析有什么区别？\nMMRM的US协方差结构不收敛，如何处理？"
+  },
+  {
+    "objectID": "index.html#推荐知识文章",
+    "href": "index.html#推荐知识文章",
+    "title": "TrialStats Notes",
+    "section": "推荐知识文章",
+    "text": "推荐知识文章\n\n事件数与样本量计算\nLog-rank 与生存分析\nPromising Zone 与一类错误率控制\n\n\n\n\n\n\n\nNote内容声明\n\n\n\n问答根据以往讨论主题重新表述，并非聊天的逐字转录。示例只用于学习，不包含真实试验的保密数据；正式研究设计请核查原始指南、文献、方案及统计分析计划。"
+  },
+  {
+    "objectID": "index.html#公开站点与私人知识库",
+    "href": "index.html#公开站点与私人知识库",
+    "title": "TrialStats Notes",
+    "section": "公开站点与私人知识库",
+    "text": "公开站点与私人知识库\n此站展示公开、经审阅的统计文章、技术项目和专业问答。私人历史问题与个人复习笔记存放在独立的加密本地知识库内，不会通过 GitHub Pages 发布。"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About / 关于",
+    "section": "",
+    "text": "请用自己的真实公开信息替换本节。避免写入未经公开授权的雇主项目详情。\n\n关注临床试验设计、生物统计方法与统计计算。本站用于整理公开可讨论的方法知识，并分享基于模拟数据的可复现技术实践。"
+  },
+  {
+    "objectID": "about.html#个人简介",
+    "href": "about.html#个人简介",
+    "title": "About / 关于",
+    "section": "",
+    "text": "请用自己的真实公开信息替换本节。避免写入未经公开授权的雇主项目详情。\n\n关注临床试验设计、生物统计方法与统计计算。本站用于整理公开可讨论的方法知识，并分享基于模拟数据的可复现技术实践。"
+  },
+  {
+    "objectID": "about.html#专业能力待按真实经历编辑",
+    "href": "about.html#专业能力待按真实经历编辑",
+    "title": "About / 关于",
+    "section": "专业能力（待按真实经历编辑）",
+    "text": "专业能力（待按真实经历编辑）\n\nTrial Design: 样本量规划、事件驱动设计、期中分析\nStatistical Methods: 生存分析、纵向数据分析、Estimands 与敏感性分析\nStatistical Computing: R / SAS、模拟研究、结果验证"
+  },
+  {
+    "objectID": "about.html#代表性项目",
+    "href": "about.html#代表性项目",
+    "title": "About / 关于",
+    "section": "代表性项目",
+    "text": "代表性项目\n参见 Projects。请只将已完成、能解释个人贡献且允许公开的项目列为正式作品。"
+  },
+  {
+    "objectID": "about.html#联系方式与-cv",
+    "href": "about.html#联系方式与-cv",
+    "title": "About / 关于",
+    "section": "联系方式与 CV",
+    "text": "联系方式与 CV\n在此添加你愿意公开的 GitHub、学术主页、邮箱与 PDF CV。"
+  },
+  {
+    "objectID": "DEPLOYMENT-ROADMAP.html",
+    "href": "DEPLOYMENT-ROADMAP.html",
+    "title": "TrialStats Notes 正式上线计划（Public + Private）",
+    "section": "",
+    "text": "Public Site：Quarto 生成的完全公开的网站，GitHub Pages 发布。仅包含获准公开的统计方法内容、源代码、项目作品集和专业问答。\nPrivate Vault v1：另一份独立 ZIP 内的本地应用，只存随机加密后的个人提问、回答、笔记、收藏及复习进度。不上传 GitHub。\nPrivate Online v2（后续）：如果需要登录后跨设备访问：在专用私人子域名部署应用，由 Cloudflare Access 等身份认证服务保护，配置仅本人许可的登录身份；数据经独立后端存储，数据库开启用户级访问规则，所有 API/存储也实施服务端鉴权，必要时使用端到端加密。GitHub Pages 不能替代这套控制。\n\n\n\n\n\n审核 questions/questions.json 中全部公开问答及参考资料；检查首页、About、Projects 中的姓名、经历、作品和任何可能存在的占位内容。\n在公开项目执行 python scripts/build_questions.py，确保问答索引与只读复习页面一致。\n运行 python scripts/check_publication.py，并人工核查全部待提交文件和生成的 _site/；此脚本的敏感文件名检测是启发式检查，不能识别所有敏感信息。\n先本地执行 quarto preview，再执行 quarto render，核查导航、公式、内部链接与静态工具。\n在 GitHub 新建公开仓库 trialstats-notes；只上传本目录内的公开站点源码，不要上传包含私人应用的父目录或私人备份。\n在项目内设置 git remote，然后首次执行 quarto publish gh-pages。按 Quarto 官方提示完成认证与首次发布，将 _publish.yml 提交到 main。\n在仓库 Settings → Pages 确认公开 URL；检查 Actions 权限允许 Actions 发布（通常需要 contents: write）；模板工作流将先重建问答索引、执行敏感文件检查，再发布。\n从无登录状态访问公开 URL，核对搜索、公式、文章、项目、计算器与手机版布局；检查不能访问私人数据或备份。\n最后才将 URL 放进简历、LinkedIn、研究者简介或其他公开渠道。\n\n\n\n\n\n将独立的私人知识库 ZIP 解压到本机。不要复制进入公开 GitHub 仓库。\n在私人知识库目录执行 python -m http.server 8765 --bind 127.0.0.1 并打开 http://127.0.0.1:8765/。\n创建强密码并立即导出加密备份。\n需要迁移旧版个人笔记时，先从旧版网站导出 JSON，随后在新私人空间使用“导入旧版个人笔记”。迁移完成后安全处理旧版明文 JSON 与旧版浏览器本地缓存。\n每次重要更新后导出新的加密备份；可以跨设备导入备份，但这不是自动同步。\n\n\n\n\n\n自有域名，例如 notes.example.com，接入支持 Access 的托管服务，限制应用仅本人身份访问。\n数据存储到非公开的数据库，实施强制身份鉴权和针对个人记录的行级访问规则；若使用 Supabase，RLS 必须在表级正确开启和测试，不要把 service-role 密钥放到前端。\n使用 HTTPS，正确配置重定向、会话失效、备份与恢复、日志脱敏及安全响应机制。\n如需服务器端进行 R 模拟，需额外计算服务并单独限制资源与输入文件。\n不允许将真实患者数据或公司内部受限材料导入未经正式评估或授权的私人在线系统。\n\n\n\n\n\nQuarto + GitHub Pages: https://quarto.org/docs/publishing/github-pages.html\nGitHub Pages 可见性: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site\nCloudflare Access web applications: https://developers.cloudflare.com/cloudflare-one/access-controls/applications/http-apps/\nWeb Crypto API: https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API"
+  },
+  {
+    "objectID": "DEPLOYMENT-ROADMAP.html#安全架构",
+    "href": "DEPLOYMENT-ROADMAP.html#安全架构",
+    "title": "TrialStats Notes 正式上线计划（Public + Private）",
+    "section": "",
+    "text": "Public Site：Quarto 生成的完全公开的网站，GitHub Pages 发布。仅包含获准公开的统计方法内容、源代码、项目作品集和专业问答。\nPrivate Vault v1：另一份独立 ZIP 内的本地应用，只存随机加密后的个人提问、回答、笔记、收藏及复习进度。不上传 GitHub。\nPrivate Online v2（后续）：如果需要登录后跨设备访问：在专用私人子域名部署应用，由 Cloudflare Access 等身份认证服务保护，配置仅本人许可的登录身份；数据经独立后端存储，数据库开启用户级访问规则，所有 API/存储也实施服务端鉴权，必要时使用端到端加密。GitHub Pages 不能替代这套控制。"
+  },
+  {
+    "objectID": "DEPLOYMENT-ROADMAP.html#一次性上线步骤",
+    "href": "DEPLOYMENT-ROADMAP.html#一次性上线步骤",
+    "title": "TrialStats Notes 正式上线计划（Public + Private）",
+    "section": "",
+    "text": "审核 questions/questions.json 中全部公开问答及参考资料；检查首页、About、Projects 中的姓名、经历、作品和任何可能存在的占位内容。\n在公开项目执行 python scripts/build_questions.py，确保问答索引与只读复习页面一致。\n运行 python scripts/check_publication.py，并人工核查全部待提交文件和生成的 _site/；此脚本的敏感文件名检测是启发式检查，不能识别所有敏感信息。\n先本地执行 quarto preview，再执行 quarto render，核查导航、公式、内部链接与静态工具。\n在 GitHub 新建公开仓库 trialstats-notes；只上传本目录内的公开站点源码，不要上传包含私人应用的父目录或私人备份。\n在项目内设置 git remote，然后首次执行 quarto publish gh-pages。按 Quarto 官方提示完成认证与首次发布，将 _publish.yml 提交到 main。\n在仓库 Settings → Pages 确认公开 URL；检查 Actions 权限允许 Actions 发布（通常需要 contents: write）；模板工作流将先重建问答索引、执行敏感文件检查，再发布。\n从无登录状态访问公开 URL，核对搜索、公式、文章、项目、计算器与手机版布局；检查不能访问私人数据或备份。\n最后才将 URL 放进简历、LinkedIn、研究者简介或其他公开渠道。"
+  },
+  {
+    "objectID": "DEPLOYMENT-ROADMAP.html#私人使用步骤",
+    "href": "DEPLOYMENT-ROADMAP.html#私人使用步骤",
+    "title": "TrialStats Notes 正式上线计划（Public + Private）",
+    "section": "",
+    "text": "将独立的私人知识库 ZIP 解压到本机。不要复制进入公开 GitHub 仓库。\n在私人知识库目录执行 python -m http.server 8765 --bind 127.0.0.1 并打开 http://127.0.0.1:8765/。\n创建强密码并立即导出加密备份。\n需要迁移旧版个人笔记时，先从旧版网站导出 JSON，随后在新私人空间使用“导入旧版个人笔记”。迁移完成后安全处理旧版明文 JSON 与旧版浏览器本地缓存。\n每次重要更新后导出新的加密备份；可以跨设备导入备份，但这不是自动同步。"
+  },
+  {
+    "objectID": "DEPLOYMENT-ROADMAP.html#未来多设备在线私人空间独立项目不包含在本次源码",
+    "href": "DEPLOYMENT-ROADMAP.html#未来多设备在线私人空间独立项目不包含在本次源码",
+    "title": "TrialStats Notes 正式上线计划（Public + Private）",
+    "section": "",
+    "text": "自有域名，例如 notes.example.com，接入支持 Access 的托管服务，限制应用仅本人身份访问。\n数据存储到非公开的数据库，实施强制身份鉴权和针对个人记录的行级访问规则；若使用 Supabase，RLS 必须在表级正确开启和测试，不要把 service-role 密钥放到前端。\n使用 HTTPS，正确配置重定向、会话失效、备份与恢复、日志脱敏及安全响应机制。\n如需服务器端进行 R 模拟，需额外计算服务并单独限制资源与输入文件。\n不允许将真实患者数据或公司内部受限材料导入未经正式评估或授权的私人在线系统。"
+  },
+  {
+    "objectID": "DEPLOYMENT-ROADMAP.html#官方文档",
+    "href": "DEPLOYMENT-ROADMAP.html#官方文档",
+    "title": "TrialStats Notes 正式上线计划（Public + Private）",
+    "section": "",
+    "text": "Quarto + GitHub Pages: https://quarto.org/docs/publishing/github-pages.html\nGitHub Pages 可见性: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site\nCloudflare Access web applications: https://developers.cloudflare.com/cloudflare-one/access-controls/applications/http-apps/\nWeb Crypto API: https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API"
+  },
+  {
+    "objectID": "knowledge/adaptive/index.html",
+    "href": "knowledge/adaptive/index.html",
+    "title": "自适应设计",
+    "section": "",
+    "text": "Group Sequential Design 与 Alpha Spending\nConditional Power 与 Conditional Error\nPromising Zone 样本量再估计\nCombination Test、阶段性独立性与模拟验证",
+    "crumbs": [
+      "知识库",
+      "自适应设计",
+      "自适应设计"
+    ]
+  },
+  {
+    "objectID": "knowledge/adaptive/index.html#计划内容",
+    "href": "knowledge/adaptive/index.html#计划内容",
+    "title": "自适应设计",
+    "section": "",
+    "text": "Group Sequential Design 与 Alpha Spending\nConditional Power 与 Conditional Error\nPromising Zone 样本量再估计\nCombination Test、阶段性独立性与模拟验证",
+    "crumbs": [
+      "知识库",
+      "自适应设计",
+      "自适应设计"
+    ]
+  },
+  {
+    "objectID": "knowledge/design/index.html",
+    "href": "knowledge/design/index.html",
+    "title": "临床试验设计",
+    "section": "",
+    "text": "核心内容规划：研究目标与对照、优效/非劣效、随机化与盲法、样本量、事件驱动设计、期中分析、随访与脱落。\n\n事件驱动试验：事件数与样本量的区别",
+    "crumbs": [
+      "知识库",
+      "临床试验设计",
+      "临床试验设计"
+    ]
+  },
+  {
+    "objectID": "knowledge/estimands/index.html",
+    "href": "knowledge/estimands/index.html",
+    "title": "Endpoints & Estimands",
+    "section": "",
+    "text": "ICH E9(R1) 的五个 estimand 属性\n治疗政策、假设性、复合变量、治疗期间及主层策略\nOS、PFS、ORR、DOR 等终点的定义与评估者\nIntercurrent Events 与 Missing Data 的区别\n主要分析、敏感性分析和补充分析的不同用途\n\n\n本页属于栏目规划，正式文章应核对 ICH 原始指导原则和最新适用版本。",
+    "crumbs": [
+      "知识库",
+      "Estimands 与终点",
+      "Endpoints & Estimands"
+    ]
+  },
+  {
+    "objectID": "knowledge/estimands/index.html#计划内容",
+    "href": "knowledge/estimands/index.html#计划内容",
+    "title": "Endpoints & Estimands",
+    "section": "",
+    "text": "ICH E9(R1) 的五个 estimand 属性\n治疗政策、假设性、复合变量、治疗期间及主层策略\nOS、PFS、ORR、DOR 等终点的定义与评估者\nIntercurrent Events 与 Missing Data 的区别\n主要分析、敏感性分析和补充分析的不同用途\n\n\n本页属于栏目规划，正式文章应核对 ICH 原始指导原则和最新适用版本。",
+    "crumbs": [
+      "知识库",
+      "Estimands 与终点",
+      "Endpoints & Estimands"
+    ]
+  },
+  {
+    "objectID": "knowledge/methods/index.html",
+    "href": "knowledge/methods/index.html",
+    "title": "统计分析方法",
+    "section": "",
+    "text": "生存分析：Log-rank、HR 与 Cox 模型\nANCOVA、MMRM 与重复测量数据\n分类终点：CMH、分层分析、Logistic Regression\n多重性与 Gatekeeping\n缺失数据：MI、MNAR 敏感性分析",
+    "crumbs": [
+      "知识库",
+      "统计分析方法",
+      "统计分析方法"
+    ]
+  },
+  {
+    "objectID": "knowledge/methods/index.html#计划内容",
+    "href": "knowledge/methods/index.html#计划内容",
+    "title": "统计分析方法",
+    "section": "",
+    "text": "生存分析：Log-rank、HR 与 Cox 模型\nANCOVA、MMRM 与重复测量数据\n分类终点：CMH、分层分析、Logistic Regression\n多重性与 Gatekeeping\n缺失数据：MI、MNAR 敏感性分析",
+    "crumbs": [
+      "知识库",
+      "统计分析方法",
+      "统计分析方法"
+    ]
+  },
+  {
+    "objectID": "knowledge/programming/index.html",
+    "href": "knowledge/programming/index.html",
+    "title": "统计编程",
+    "section": "",
+    "text": "R：survival、rpact、mmrm、emmeans\nSAS：分析数据集、统计模型与 TLF\n运行环境：依赖锁定、随机种子、单元测试、模拟日志\n结果交叉验证：手工公式、R 与其他软件比较\n\n所有示例优先使用合成或公开许可数据。",
+    "crumbs": [
+      "知识库",
+      "统计编程",
+      "统计编程"
+    ]
+  },
+  {
+    "objectID": "knowledge/programming/index.html#计划内容",
+    "href": "knowledge/programming/index.html#计划内容",
+    "title": "统计编程",
+    "section": "",
+    "text": "R：survival、rpact、mmrm、emmeans\nSAS：分析数据集、统计模型与 TLF\n运行环境：依赖锁定、随机种子、单元测试、模拟日志\n结果交叉验证：手工公式、R 与其他软件比较\n\n所有示例优先使用合成或公开许可数据。",
+    "crumbs": [
+      "知识库",
+      "统计编程",
+      "统计编程"
+    ]
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects / 技术作品集",
+    "section": "",
+    "text": "项目页强调个人贡献、验证方法、结果的可复现性。任何内部研究只有经授权且严格处理保密问题后才能公开；推荐用独立开发的教学代码和模拟数据重现原理。\n\n事件驱动样本量计算工作流（项目页模板）\nPromising Zone Monte Carlo 模拟（项目页模板）\n\n项目发布状态建议： 规划中 / 开发中 / 已验证 / 已发布。不要将规划中的项目标为已完成。",
+    "crumbs": [
+      "技术项目",
+      "Projects / 技术作品集"
+    ]
+  },
+  {
+    "objectID": "projects/sample-size-workflow.html",
+    "href": "projects/sample-size-workflow.html",
+    "title": "事件驱动样本量设计工作流",
+    "section": "",
+    "text": "状态：项目页模板（待你上传独立验证过的开源实现）。",
+    "crumbs": [
+      "技术项目",
+      "事件驱动样本量设计工作流"
+    ]
+  },
+  {
+    "objectID": "projects/sample-size-workflow.html#目标",
+    "href": "projects/sample-size-workflow.html#目标",
+    "title": "事件驱动样本量设计工作流",
+    "section": "目标",
+    "text": "目标\n构建可复现的生存终点样本量规划程序，包括事件数计算、入组和随访的模拟、敏感性分析与结果导出。",
+    "crumbs": [
+      "技术项目",
+      "事件驱动样本量设计工作流"
+    ]
+  },
+  {
+    "objectID": "projects/sample-size-workflow.html#技术清单",
+    "href": "projects/sample-size-workflow.html#技术清单",
+    "title": "事件驱动样本量设计工作流",
+    "section": "技术清单",
+    "text": "技术清单\n\n输入校验：HR、对照组事件分布、Alpha、Power、分配比例\n建模：入组时间、事件成熟与脱落\n验证：公式近似与其他软件/方法交叉核对\n输出：参数表、事件数、总样本量、研究日历假设",
+    "crumbs": [
+      "技术项目",
+      "事件驱动样本量设计工作流"
+    ]
+  },
+  {
+    "objectID": "projects/sample-size-workflow.html#代码仓库",
+    "href": "projects/sample-size-workflow.html#代码仓库",
+    "title": "事件驱动样本量设计工作流",
+    "section": "代码仓库",
+    "text": "代码仓库\n\n项目完成并审查后，填入你自己的 GitHub 仓库链接与演示截图。",
+    "crumbs": [
+      "技术项目",
+      "事件驱动样本量设计工作流"
+    ]
+  },
+  {
+    "objectID": "questions/index.html",
+    "href": "questions/index.html",
+    "title": "临床试验统计问答",
+    "section": "",
+    "text": "欢迎进入公开问答库。收录经过整理的临床试验方法、样本量、自适应设计、Estimand、MMRM 和统计编程问题。\n进入公开问答复习中心\n浏览全部公开问答目录\n\n\n\n\n\n\nNote\n\n\n\n隐私边界：本网站公开的所有文件、脚本和问答可以被任何访客查看；个人的原始问题、私人笔记、收藏和学习进度不在此网站或其公开仓库中保存。私人加密知识库是一个独立、不可随网站部署的本地应用。\n\n\n公开前的审核要求：不包含真实临床研究的未公开疗效或安全性数据，不使用未经授权的企业方案或原始聊天，不上传个人复习备份。统计答案中的假设、前提和参考资料仍需逐项核对。",
+    "crumbs": [
+      "问题与标准回答",
+      "临床试验统计问答"
+    ]
+  },
+  {
+    "objectID": "topics/index.html",
+    "href": "topics/index.html",
+    "title": "Deep Dives / 方法专题",
+    "section": "",
+    "text": "这里放完整的统计论证或深入技术文章，包括数学推导、设计权衡、可复现仿真与限制条件。\n\nPromising Zone 与 inverse-normal combination：专题文章结构",
+    "crumbs": [
+      "方法专题",
+      "Deep Dives / 方法专题"
+    ]
+  }
+]

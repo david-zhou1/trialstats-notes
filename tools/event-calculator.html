@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>事件数计算器 | TrialStats Notes</title>
+<style>
+*{box-sizing:border-box}body{font-family:system-ui,"Microsoft YaHei",sans-serif;max-width:850px;padding:28px 20px;margin:auto;line-height:1.7;color:#1d2939;background:#f6f8fb}a{color:#2563a5}.panel{padding:28px;background:#fff;border:1px solid #dae2eb;border-radius:14px;box-shadow:0 3px 15px #172b4d0a}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin:16px 0}label{display:block;font-size:.9rem;font-weight:650;margin-bottom:6px}input,select{width:100%;padding:10px;border:1px solid #b7c4d4;border-radius:8px;font-size:1rem;background:#fff}.metric{background:#edf4fc;padding:20px;border-radius:12px;margin-top:24px;text-align:center}.metric strong{font-size:2.8rem;color:#173d66}.muted{color:#526174;font-size:.94rem}.formula{font-family:Georgia,serif;overflow-x:auto;padding:12px;background:#f6f8fa;border-radius:6px}.warning{border-left:3px solid #d68a2a;padding-left:13px}.top{font-size:.93rem;margin-bottom:20px}
+</style>
+</head>
+<body>
+<div class="top"><a href="../index.html">← 返回 TrialStats Notes</a></div>
+<div class="panel">
+<h1>Survival Events Calculator</h1>
+<p class="muted">Schoenfeld 近似 · 两组 1:1 随机 · 比例风险假设 · 单侧 Alpha</p>
+<div class="grid">
+<div><label for="hr">Hazard Ratio (HR)</label><input id="hr" type="number" value="0.7" min="0.01" max="0.99" step="0.01" /></div>
+<div><label for="power">Power</label><select id="power"><option value="0.8">80%</option><option value="0.9">90%</option><option value="0.95">95%</option></select></div>
+<div><label for="alpha">One-sided Alpha</label><select id="alpha"><option value="0.025">0.025</option><option value="0.05">0.05</option><option value="0.01">0.010</option></select></div>
+</div>
+<div class="metric"><div>近似所需总事件数</div><strong id="events" aria-live="polite">–</strong><div class="muted" id="detail">不是总样本量</div></div>
+<h2>计算原理</h2>
+<div class="formula">D ≈ 4 × (z<sub>1−α</sub> + z<sub>Power</sub>)<sup>2</sup> / [ln(HR)]<sup>2</sup></div>
+<p>对所需总事件数向上取整；HR 越接近 1，所需事件数通常越多。</p>
+<p class="warning muted"><strong>使用限制：</strong>此处是常用近似，不包含入组历程、随访、脱落率、非比例风险、组序贯设计或样本量再估计。不可将总事件数直接当作总样本量。正式方案需要完整建模及独立验证。</p>
+</div>
+<script>
+// Rational approximation to the inverse standard normal CDF (Peter J. Acklam).
+function qnorm(p){
+  if(!(p>0&&p<1))return NaN;
+  const a=[-39.69683028665376,220.9460984245205,-275.9285104469687,138.3577518672690,-30.66479806614716,2.506628277459239];
+  const b=[-54.47609879822406,161.5858368580409,-155.6989798598866,66.80131188771972,-13.28068155288572];
+  const c=[-0.007784894002430293,-0.3223964580411365,-2.400758277161838,-2.549732539343734,4.374664141464968,2.938163982698783];
+  const d=[0.007784695709041462,0.3224671290700398,2.445134137142996,3.754408661907416];
+  const lo=0.02425,hi=1-lo;let q,r;
+  if(p<lo){q=Math.sqrt(-2*Math.log(p));return (((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5])/((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1);}
+  if(p>hi){q=Math.sqrt(-2*Math.log(1-p));return -(((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5])/((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1);}
+  q=p-0.5;r=q*q;
+  return (((((a[0]*r+a[1])*r+a[2])*r+a[3])*r+a[4])*r+a[5])*q/(((((b[0]*r+b[1])*r+b[2])*r+b[3])*r+b[4])*r+1);
+}
+function update(){
+  let hr=Number(document.getElementById('hr').value),power=Number(document.getElementById('power').value),alpha=Number(document.getElementById('alpha').value);
+  let out=document.getElementById('events'), detail=document.getElementById('detail');
+  if(!(hr>0&&hr<1)){out.textContent='—';detail.textContent='请填写 0 < HR < 1';return;}
+  const d=4*Math.pow(qnorm(1-alpha)+qnorm(power),2)/Math.pow(Math.log(hr),2);
+  out.textContent=Number.isFinite(d)?Math.ceil(d).toLocaleString('en-US'):'—';
+  detail.textContent='总事件数（向上取整）；不是总样本量';
+}
+for(const id of ['hr','power','alpha'])document.getElementById(id).addEventListener('input',update);
+update();
+</script>
+</body></html>
