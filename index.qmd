@@ -12,10 +12,11 @@ page-layout: full
 
 面向生物统计同行的个人知识库、方法学文章、编程项目与交互式工具。
 
-[**进入问答复习中心 →**](questions/review.html){.btn .btn-primary}　[浏览全部问答](questions/catalog.qmd){.btn .btn-outline-primary}
+[**打开可编辑知识导图 →**](mindmap/editor.html){.btn .btn-primary}　[浏览33条公开问答](questions/review.html){.btn .btn-outline-primary}
 :::
 
 ::: {.link-grid}
+<a href="mindmap/editor.html"><strong>Knowledge Map · 可编辑思维导图</strong><span>树状知识结构，拖拽编辑、展开折叠，绑定33条临床试验问答；草稿仅存本机。</span></a>
 <a href="questions/review.html"><strong>Q&A · 问答复习</strong><span>33条公开专业问答，支持关键词搜索、分类、隐藏答案与解析。</span></a>
 <a href="knowledge/index.html"><strong>Knowledge Base</strong><span>系统化整理临床试验设计、Estimand、统计分析与指导原则。</span></a>
 <a href="topics/index.html"><strong>Deep Dives</strong><span>深入讨论方法假设、推导、统计模拟与验证。</span></a>
