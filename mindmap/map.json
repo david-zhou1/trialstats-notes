@@ -1,0 +1,262 @@
+{
+  "version": 1,
+  "title": "Clinical Trial Knowledge Map",
+  "nodes": [
+    {
+      "id": "root",
+      "parent": null,
+      "title": "临床试验统计",
+      "x": 72,
+      "y": 430,
+      "collapsed": false,
+      "questionIds": []
+    },
+    {
+      "id": "design",
+      "parent": "root",
+      "title": "临床试验设计",
+      "x": 400,
+      "y": 70,
+      "collapsed": true,
+      "questionIds": []
+    },
+    {
+      "id": "sample",
+      "parent": "design",
+      "title": "样本量与事件数",
+      "x": 755,
+      "y": 24,
+      "collapsed": false,
+      "questionIds": [
+        "Q001",
+        "Q002",
+        "Q005"
+      ]
+    },
+    {
+      "id": "schedule",
+      "parent": "design",
+      "title": "入组与随访",
+      "x": 755,
+      "y": 116,
+      "collapsed": false,
+      "questionIds": [
+        "Q003",
+        "Q004"
+      ]
+    },
+    {
+      "id": "adaptive",
+      "parent": "root",
+      "title": "期中与自适应",
+      "x": 400,
+      "y": 215,
+      "collapsed": false,
+      "questionIds": []
+    },
+    {
+      "id": "conditional",
+      "parent": "adaptive",
+      "title": "Conditional Power / PZ",
+      "x": 755,
+      "y": 77,
+      "collapsed": false,
+      "questionIds": [
+        "Q006",
+        "Q007"
+      ]
+    },
+    {
+      "id": "combination",
+      "parent": "adaptive",
+      "title": "组合检验与独立增量",
+      "x": 755,
+      "y": 169,
+      "collapsed": false,
+      "questionIds": [
+        "Q008",
+        "Q009"
+      ]
+    },
+    {
+      "id": "gsd",
+      "parent": "adaptive",
+      "title": "Group Sequential / α",
+      "x": 755,
+      "y": 261,
+      "collapsed": false,
+      "questionIds": [
+        "Q010",
+        "Q012"
+      ]
+    },
+    {
+      "id": "sim",
+      "parent": "adaptive",
+      "title": "统计模拟与 MCSE",
+      "x": 755,
+      "y": 353,
+      "collapsed": false,
+      "questionIds": [
+        "Q011"
+      ]
+    },
+    {
+      "id": "estimand",
+      "parent": "root",
+      "title": "终点与 Estimand",
+      "x": 400,
+      "y": 360,
+      "collapsed": true,
+      "questionIds": []
+    },
+    {
+      "id": "ice",
+      "parent": "estimand",
+      "title": "Estimand / ICE",
+      "x": 755,
+      "y": 268,
+      "collapsed": false,
+      "questionIds": [
+        "Q013",
+        "Q014",
+        "Q015"
+      ]
+    },
+    {
+      "id": "pfs",
+      "parent": "estimand",
+      "title": "PFS、OS 与死亡事件",
+      "x": 755,
+      "y": 360,
+      "collapsed": false,
+      "questionIds": [
+        "Q016",
+        "Q018"
+      ]
+    },
+    {
+      "id": "birc",
+      "parent": "estimand",
+      "title": "BICR 与终点评估",
+      "x": 755,
+      "y": 452,
+      "collapsed": false,
+      "questionIds": [
+        "Q017"
+      ]
+    },
+    {
+      "id": "methods",
+      "parent": "root",
+      "title": "统计分析",
+      "x": 400,
+      "y": 505,
+      "collapsed": true,
+      "questionIds": []
+    },
+    {
+      "id": "mmrm",
+      "parent": "methods",
+      "title": "MMRM 与缺失数据",
+      "x": 755,
+      "y": 459,
+      "collapsed": false,
+      "questionIds": [
+        "Q019",
+        "Q020",
+        "Q021"
+      ]
+    },
+    {
+      "id": "cmh",
+      "parent": "methods",
+      "title": "分层比较与 CMH",
+      "x": 755,
+      "y": 551,
+      "collapsed": false,
+      "questionIds": [
+        "Q022"
+      ]
+    },
+    {
+      "id": "practice",
+      "parent": "root",
+      "title": "临床试验实践",
+      "x": 400,
+      "y": 650,
+      "collapsed": true,
+      "questionIds": []
+    },
+    {
+      "id": "control",
+      "parent": "practice",
+      "title": "阳性对照与标准治疗",
+      "x": 755,
+      "y": 558,
+      "collapsed": false,
+      "questionIds": [
+        "Q023",
+        "Q024"
+      ]
+    },
+    {
+      "id": "drug",
+      "parent": "practice",
+      "title": "治疗药物与安全性",
+      "x": 755,
+      "y": 650,
+      "collapsed": false,
+      "questionIds": [
+        "Q025",
+        "Q026"
+      ]
+    },
+    {
+      "id": "blind",
+      "parent": "practice",
+      "title": "盲法与运营",
+      "x": 755,
+      "y": 742,
+      "collapsed": false,
+      "questionIds": [
+        "Q027",
+        "Q028"
+      ]
+    },
+    {
+      "id": "coding",
+      "parent": "root",
+      "title": "数据与编程",
+      "x": 400,
+      "y": 795,
+      "collapsed": true,
+      "questionIds": []
+    },
+    {
+      "id": "plot",
+      "parent": "coding",
+      "title": "疗效数据与绘图",
+      "x": 755,
+      "y": 749,
+      "collapsed": false,
+      "questionIds": [
+        "Q029",
+        "Q030",
+        "Q032"
+      ]
+    },
+    {
+      "id": "population",
+      "parent": "coding",
+      "title": "分析集与缺失处理",
+      "x": 755,
+      "y": 841,
+      "collapsed": false,
+      "questionIds": [
+        "Q031",
+        "Q033"
+      ]
+    }
+  ]
+}
