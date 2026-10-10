@@ -18,10 +18,7 @@ jobs:
         run: python scripts/build_questions.py
       - name: Check publication boundary
         run: python scripts/check_publication.py
-      # First local `quarto publish gh-pages` creates _publish.yml.
-      # Skip initial repository push before this config exists.
       - name: Publish to gh-pages
-        if: ${{ hashFiles('_publish.yml') != '' }}
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
