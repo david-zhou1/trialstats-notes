@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>临床试验知识导图 | TrialStats Notes</title>
+  <meta name="description" content="可编辑的临床试验统计知识导图，节点关联公开问答，支持本地保存、搜索与导出。">
+  <link rel="stylesheet" href="mindmap.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><span class="logo">✣</span><span><strong>TrialStats <em>Map</em></strong><small>CLINICAL BIOSTATISTICS</small></span></div>
+    <div class="heading"><span class="kicker">KNOWLEDGE CANVAS</span><strong>临床试验知识导图</strong><span class="saved" id="saveState" role="status">准备就绪</span></div>
+    <nav class="toolbar" aria-label="导图操作">
+      <button id="undo" title="撤销 Ctrl+Z">↶ <span>撤销</span></button><button id="redo" title="重做 Ctrl+Y">↷ <span>重做</span></button>
+      <button id="reflow" title="重新计算自动布局">▦ <span>排版</span></button><button id="fit" title="适应画布">⊞ <span>适应</span></button>
+      <a class="back-link" href="../index.html">↗ 返回网站</a>
+    </nav>
+  </header>
+  <div class="privacy-banner"><span>●</span> <strong>公开知识编辑草稿</strong>：更改只保存在本机浏览器，不会自动发布或同步。请勿在此输入私人笔记、未公开临床数据或公司内部信息。<button id="dismissBanner" aria-label="关闭提示">×</button></div>
+  <div class="workbench">
+    <aside class="left-panel" aria-label="知识目录">
+      <div class="panel-heading"><span class="overline">EXPLORER</span><h2>知识目录</h2><span id="nodeCount" class="count">—</span></div>
+      <label class="search-wrap"><span>⌕</span><input id="nodeSearch" type="search" placeholder="搜索节点或问答…" aria-label="搜索知识节点"></label>
+      <div id="treeList" class="tree-list" role="tree"></div>
+      <div class="left-actions"><button class="primary" id="newRootBranch">＋ 新增一级分支</button><button class="text-btn" id="expandAll">全部展开</button><button class="text-btn" id="collapseAll">收起分支</button></div>
+      <div class="mini-note"><strong>使用提示</strong><p>拖拽节点调整位置；滚轮缩放、拖拽空白区域平移；双击节点折叠子分支。Tab 新建子节点，Enter 新建同级节点。</p></div>
+    </aside>
+    <main class="canvas-panel" aria-label="交互式思维导图">
+      <div class="canvas-toolbar"><span class="pill">● <span id="mapStatus">PUBLIC KNOWLEDGE</span></span><span id="canvasTip">点击节点编辑 · 拖拽调整布局</span><button id="zoomOut" aria-label="缩小">−</button><button id="zoomIn" aria-label="放大">＋</button></div>
+      <svg id="mapCanvas" role="img" aria-label="可交互的临床试验知识思维导图" tabindex="0">
+        <defs><pattern id="dotgrid" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#d9e3ef"/></pattern></defs>
+        <rect id="backdrop" x="-10000" y="-10000" width="20000" height="20000" fill="url(#dotgrid)"/>
+        <g id="links"></g><g id="nodes"></g>
+      </svg>
+      <div class="canvas-bottom"><span>知识结构 <b id="branchStat">—</b>　·　关联问答 <b id="linkStat">—</b></span><span>滚轮缩放　|　拖动画布移动</span></div>
+    </main>
+    <aside class="right-panel" aria-label="节点编辑与问答">
+      <div class="panel-heading"><span class="overline">INSPECTOR</span><h2>节点与问答</h2></div>
+      <div id="inspector" class="inspector"></div>
+      <div class="export-panel"><span class="overline">WORKSPACE</span><h3>保存与发布</h3><p>本地自动保存。需要公开展示时，导出 JSON 并在 GitHub 仓库中替换 <code>mindmap/map.json</code>，提交后网站自动更新。</p>
+        <div class="export-buttons"><button class="primary" id="exportMap">↓ 导出导图 JSON</button><button id="importMap">↑ 导入导图</button><input type="file" id="mapFile" accept=".json,application/json" hidden></div>
+        <a href="https://github.com/david-zhou1/trialstats-notes/blob/main/mindmap/map.json" target="_blank" rel="noopener noreferrer">在 GitHub 查看发布数据 ↗</a>
+        <button class="danger-link" id="resetMap">恢复网站公开版本</button>
+      </div>
+    </aside>
+  </div>
+</div>
+<script src="mindmap.js" defer></script>
+</body>
+</html>
